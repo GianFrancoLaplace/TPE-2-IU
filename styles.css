@@ -1,0 +1,158 @@
+:root{
+    --color-primario: #000;
+    --bg-primario:#101010
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+}
+
+.header {
+    background-color: #444;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner h1 {
+    margin: 0;
+    color: #e53935;
+    font-size: 28px;
+}
+
+.main-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.game-section img {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.icon-buttons button {
+    margin: 0 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-buttons button:hover {
+    color: #ffd700;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.description h2 {
+    margin-bottom: 10px;
+    color: #ffa726;
+}
+
+.movies-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.movie {
+    background-color: #333;
+    padding: 15px;
+    width: 45%;
+    border-radius: 10px;
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.movie-info {
+    padding: 10px 0;
+}
+
+.movie-info h3 {
+    margin: 5px 0;
+    color: #ffca28;
+}
+
+.movie-info p {
+    margin: 5px 0 10px;
+}
+
+.movie-info a {
+    color: #29b6f6;
+    text-decoration: none;
+}
+
+.movie-info a:hover {
+    text-decoration: underline;
+}
+
+.comments-section {
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.comment-input {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.comment-input textarea {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+}
+
+.comment-input button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #29b6f6;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.comment-input button:hover {
+    background-color: #0288d1;
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.comment img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #aaa;
+}
