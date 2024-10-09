@@ -1,6 +1,6 @@
-:root{
+:root {
     --color-primario: #000;
-    --bg-primario:#101010
+    --bg-primario: #101010;
 }
 
 body {
@@ -157,13 +157,96 @@ body {
     color: #aaa;
 }
 
-/* Seccion Login */
+/* Sección Registrarse */
+.register-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    background: linear-gradient(to bottom, #ffffff, #3b79f1); 
+}
 
+.register-section .logo {
+    margin-bottom: 10px;
+}
+
+.register-section .logo img {
+    width: 200px; 
+    height: auto;
+}
+
+.register-section .login-box {
+    background: #1a3b8f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    width: 100%;
+    max-width: 400px; 
+}
+
+.register-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em; 
+}
+
+.register-section label {
+    display: block; 
+    text-align: left; 
+    margin: 10px 0 5px; 
+}
+
+.register-section input[type="text"],
+.register-section input[type="email"],
+.register-section input[type="password"] {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: none; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+}
+
+.register-section .btn {
+    background: white; 
+    color: #1a3b8f; 
+    border: 2px solid #1a3b8f; 
+    border-radius: 5px; 
+    padding: 10px 30px; 
+    transition: background-color 0.3s ease; 
+    cursor: pointer; 
+}
+
+.register-section .btn:hover {
+    background: #689bfa; 
+}
+
+.register-section .captcha-container {
+    margin: 20px 0; 
+}
+
+.register-section .register-text {
+    margin-top: 15px; 
+    font-size: 0.9em; 
+}
+
+.register-section .login-link {
+    color: #020202; 
+    text-decoration: none; 
+    transition: color 0.3s ease; /* Efecto de transición */
+}
+
+.register-section .login-link:hover {
+    color: #ddd; /* Color al pasar el cursor */
+}
+
+/* Sección Login */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .login-section {
@@ -171,7 +254,6 @@ body {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(to bottom, #ffffff, #3b79f1);
-    
     font-family: Arial, sans-serif;
     height: 100vh;
     margin: 0;
@@ -182,7 +264,7 @@ body {
 }
 
 .login-section .logo img {
-    width: 200px; 
+    width: 200px;
     height: auto;
 }
 
@@ -191,7 +273,6 @@ body {
     text-align: center;
     margin-bottom: 20px;
 }
-
 
 .login-section .login-container {
     display: flex;
@@ -260,14 +341,14 @@ body {
 .login-section .checkbox-container span {
     color: white;
     margin-left: 5px;
-} 
+}
 
 .login-section .btn {
     background: white;
     color: #1a3b8f;
     border: 2px solid #1a3b8f;
     border-radius: 5px;
-    padding: 10px 30px; 
+    padding: 10px 30px;
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
@@ -297,13 +378,13 @@ body {
 }
 
 .login-section .btn-google img {
-    width: 20px; 
+    width: 20px;
     height: auto;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .login-section .btn-google:hover {
-    background-color: #689bfa; 
+    background-color: #689bfa;
 }
 
 .login-section .register-text {
@@ -320,37 +401,137 @@ body {
     text-decoration: underline;
 }
 
+/* Media Queries para Responsividad */
+
 /* (móviles) */
 @media (max-width: 480px) {
-    .login-section .login-box {
+    .login-section .login-box,
+    .register-section .login-box {
         padding: 15px;
         border-radius: 8px;
+        width: 90%; 
     }
 
-    .login-section .login-box h2 {
+    .login-section .login-box h2,
+    .register-section h2 {
         font-size: 1.2em;
     }
 
-    .login-section .btn, .login-section .google-btn {
+    .login-section .btn, 
+    .register-section .btn, 
+    .login-section .btn-google {
         padding: 8px;
+        font-size: 14px; 
+    }
+
+    .game-section img {
+        width: 200px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .login-section .login-box,
+    .register-section .login-box {
+        padding: 15px;
+        border-radius: 8px;
+        width: 90%; 
+    }
+
+    .login-section .login-box h2,
+    .register-section h2 {
+        font-size: 1.2em;
+    }
+
+    .login-section .btn, 
+    .register-section .btn, 
+    .login-section .btn-google {
+        padding: 8px;
+        font-size: 14px; 
+    }
+
+    .game-section img {
+        width: 200px; 
+    }
+
+    .movie {
+        width: 100%; 
+    }
+
+    .movies-section {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .comment {
+        flex-direction: column; 
+        align-items: flex-start; 
     }
 }
 
 /* (tablets) */
 @media (min-width: 481px) and (max-width: 768px) {
-    .login-section .login-box {
+    .login-section .login-box,
+    .register-section .login-box {
         width: 90%;
         max-width: 350px;
     }
 
-    .login-section .login-box h2 {
+    .login-section .login-box h2,
+    .register-section h2 {
         font-size: 1.4em;
+    }
+
+    .game-section img {
+        width: 250px; 
+    }
+
+    .movie {
+        width: 45%; 
+    }
+
+    .movies-section {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+    }
+
+    .comment {
+        flex-direction: row; 
     }
 }
 
-/* (desktop) */
-@media (min-width: 769px) {
-    .login-section .login-box {
-        width: 400px;
+/* (pantallas pequeñas de escritorio) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .login-section .login-box,
+    .register-section .login-box {
+        width: 80%; 
+        max-width: 400px;
+    }
+
+    .game-section img {
+        width: 300px; 
+    }
+
+    .movie {
+        width: 30%; 
+    }
+
+    .movies-section {
+        flex-wrap: wrap; 
+    }
+}
+
+/* (pantallas grandes de escritorio) */
+@media (min-width: 1025px) {
+    .login-section .login-box,
+    .register-section .login-box {
+        width: 400px; 
+    }
+
+    .movie {
+        width: 22%; 
+    }
+
+    .movies-section {
+        flex-direction: row; 
     }
 }
