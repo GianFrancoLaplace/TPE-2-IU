@@ -156,3 +156,201 @@ body {
     background-color: #333;
     color: #aaa;
 }
+
+/* Seccion Login */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #ffffff, #3b79f1);
+    
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-section .logo {
+    margin-bottom: 10px;
+}
+
+.login-section .logo img {
+    width: 200px; 
+    height: auto;
+}
+
+.login-section h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.login-section .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-section .login-box {
+    background: #1a3b8f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-section .login-box h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.login-section .login-box label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+.login-section .login-box input[type="email"],
+.login-section .login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-section .remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.login-section .remember-me input {
+    margin-right: 5px;
+}
+
+.login-section .form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.login-section .checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-section .checkbox-container span {
+    color: white;
+    margin-left: 5px;
+} 
+
+.login-section .btn {
+    background: white;
+    color: #1a3b8f;
+    border: 2px solid #1a3b8f;
+    border-radius: 5px;
+    padding: 10px 30px; 
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.login-section .btn:hover {
+    background: #689bfa;
+}
+
+/* Estilo del botón de login con Google */
+.login-section .google-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.login-section .btn-google {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-section .btn-google img {
+    width: 20px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.login-section .btn-google:hover {
+    background-color: #689bfa; 
+}
+
+.login-section .register-text {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.login-section .register-text a {
+    color: #add8e6;
+    text-decoration: none;
+}
+
+.login-section .register-text a:hover {
+    text-decoration: underline;
+}
+
+/* (móviles) */
+@media (max-width: 480px) {
+    .login-section .login-box {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .login-section .login-box h2 {
+        font-size: 1.2em;
+    }
+
+    .login-section .btn, .login-section .google-btn {
+        padding: 8px;
+    }
+}
+
+/* (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .login-section .login-box {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .login-section .login-box h2 {
+        font-size: 1.4em;
+    }
+}
+
+/* (desktop) */
+@media (min-width: 769px) {
+    .login-section .login-box {
+        width: 400px;
+    }
+}
