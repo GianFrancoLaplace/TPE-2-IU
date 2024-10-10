@@ -362,14 +362,17 @@ body{
 /*-----------------------------HEADER---------------------------------------*/
 .header_container{
     display: flex;
-    padding: 1rem 2rem;
     background-color: #2771CD;
     justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .menu-hamburguesa {
-    width: 35px;
-    height: 25px;
+    width: 30px;
+    height: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -377,38 +380,49 @@ body{
   }
 
   .menu-hamburguesa span {
+    display: block;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background-color: #ffffff; /* Color líneas */
     border-radius: 2px;
   }
 
-.header__logo{
+.logo{
+    max-width: 100px;
+    height: auto;
+}
+
+.busqueda_container{
     display: flex;
     align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 200px;
 }
-.logo{
-    max-width: 7rem;
+.barra-busq{ /*input*/
+    width: 100%;
+    border:none;
 }
-  .barra-busq{
-    padding: 10px;
-    padding-right: 35px;
-    border-radius: 40px 0 0 40px;
-    border:0;
-    outline: none;
-    font-size: 1rem;
-  }
 
-  .lupa{
-    background-color: #FFA300;
-    padding: 11.6px;
-    position: absolute;
-    margin: auto;
-    border-radius: 0 40px 40px 0;
-    color: #000;
+.lupa{ /*boton*/
+    color: #000000;
     cursor: pointer;
     border: none;
-  }
+}
+
+/* Opciones de usuario */
+.user-options {
+    display: none;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.user-options a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
 
 /*----------------------------------------------------------------------------------------*/
 
@@ -628,5 +642,9 @@ body{
 
     .movies-section {
         flex-direction: row; 
+    }
+
+    .user-options {
+        display: flex;
     }
 }
