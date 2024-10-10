@@ -35,6 +35,41 @@ body{
     margin: 0;
 }
 
+h1{
+    font-family: var(--tipografia-principal);
+    color: white;
+}
+
+h2{
+    font-family: var(--tipografia-principal);
+    color: white;
+}
+
+h3{
+    font-family: var(--tipografia-principal);
+    color: white;
+}
+
+h4{
+    font-family: var(--tipografia-principal);
+    color: white;
+}
+
+h5{
+    font-family: var(--tipografia-principal);
+    color: white;
+}
+
+h6{
+    font-family: var(--tipografia-principal);
+    color: white;
+}
+
+p{
+    font-family: var(--tipografia-principal);
+    color: white;
+}
+
 .main-content {
     padding: 5px;
 }
@@ -62,6 +97,22 @@ body{
     text-align: center;
     margin-bottom: 30px;
 }
+
+.contenido-link{
+    text-align: center;
+}
+
+.contenido-link{
+    display: block;
+    text-align: center;
+}
+
+.contenido-link span{
+    font-family: var(--tipografia-principal);
+    font-size: var(--font-size-xs);
+    font-weight: bolder;
+}
+
 .comments-section {
     width: 60%;
     margin-bottom: 30px;
@@ -76,8 +127,8 @@ body{
     flex-grow: 1;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #444;
-    background-color: #333;
+    border: 1px solid var(--color-blanco-apagado);
+    background-color: white;
     color: #fff;
 }
 
@@ -98,7 +149,7 @@ body{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    background-color: #444;
+    background-color: var(--color-primario-oscuro);
     padding: 15px;
     border-radius: 10px;
 }
@@ -451,10 +502,6 @@ body{
 
     .game-section{
         width: 100%;
-        height: 700px;
-        display: block;
-        align-items: center;
-        margin-bottom: 30px;
     }
 
     .anuncio-div{
@@ -462,8 +509,9 @@ body{
     }
 
     .description-div{
-        background-color: var(--bg-secundario);
+        background-color: var(--color-primario-oscuro);
         border-radius: 5%;
+        padding: 16px;
     }
 
     .description-div h2{
@@ -496,9 +544,13 @@ body{
     .card-contenido-div{
         align-items: center;
         display: flex;
-        background-color: var(--bg-secundario);
-        border-radius: 5%;
+        background-color: var(--color-primario);
+        border-radius: 5px;
         padding: 8px;
+    }
+
+    .card-contenido-div:nth-child(2){
+        margin-top: 16px;
     }
 
     .card-contenido-div img{
@@ -525,6 +577,15 @@ body{
         font-family: var(--tipografia-principal);
         color: var(--color-secundario);
         text-align: center;
+    }
+
+    .container-button{
+        border: #000;
+        border-radius: 4px;
+        background-color: var(--color-primario);
+        width: 24px;
+        height: 24px;
+        margin: 8px 20px 0px 0px;
     }
 }
 
