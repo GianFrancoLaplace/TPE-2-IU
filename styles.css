@@ -172,13 +172,16 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh; 
+     
+    height: 100%; 
+    padding: 20px; 
+    min-height: 100vh; 
     background: linear-gradient(to bottom, #ffffff, #3b79f1); 
 }
 
 .register-section .logo {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center; 
 }
 
 .register-section .logo img {
@@ -187,14 +190,14 @@ p{
 }
 
 .register-section .login-box {
-    background: #1a3b8f;
+    background: #1a3b8f; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: white;
     width: 100%;
-    max-width: 400px; 
+    max-width: 400px;  
 }
 
 .register-section h2 {
@@ -263,6 +266,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     background: linear-gradient(to bottom, #ffffff, #3b79f1);
     font-family: Arial, sans-serif;
     height: 100vh;
@@ -271,6 +275,7 @@ p{
 
 .login-section .logo {
     margin-bottom: 10px;
+    text-align: center; /* Centra el logo en el contenedor */
 }
 
 .login-section .logo img {
@@ -409,6 +414,71 @@ p{
 
 .login-section .register-text a:hover {
     text-decoration: underline;
+}
+
+/* Estilos del Captcha */
+
+.captcha-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.captcha-container p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.captcha-container label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.captcha-image {
+    width: auto;
+    max-width: 100%;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.captcha-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.captcha-container button {
+    background-color: #2771CD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.captcha-container button:hover {
+    background-color: #194884;
+}
+
+.message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
 }
 /*-----------------------------HEADER---------------------------------------*/
 .header_container{
