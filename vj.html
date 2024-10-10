@@ -7,32 +7,71 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="banner">
-            <h1>4 EN LINEA BATMAN VS SUPERMAN</h1>
-        </div>
-    </header>
+    <header>
+        <div class="header_container">
+            <div class="menu-hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            
+            <div class="logo_container">
+                <a href="home.html" class="link-logo"><img src="./img/Logo_GAMESTORE.png" class="logo" alt="logo-game-store"></a>
+            </div>
+            
+            <div class="busqueda_container">
+                <input class="barra-busq" type="text" placeholder="Buscar...">
+                <button class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
 
-    <section class="main-content">
-        <div class="game-section">
-            <img src="game-board.png" alt="Tablero de Juego">
-            <div class="icon-buttons">
-                <button class="star-icon">★</button>
-                <button class="like-icon">❤️</button>
-                <button class="comment-icon">💬</button>
+            <div class="atajos">
+                <button>carrito</button>
+                <button>mi cuenta</button>
             </div>
         </div>
+    </header>
+    <section class="main-content">
+        <section class="game-section">
+            <div class="tableroyanuncios-div">
+                <div class="anuncio-div anuncio-izquierda">
+                    anuncios
+                </div>
+                <div class="tablero-div">
+                    <img src="img/gameBoard.png" alt="Tablero de Juego">
+                </div>
+                <div class="anuncio-div anuncio-derecha">
+                    Anuncios
+                </div>
+            </div>
+            <div class="buttons-div">
+                <div class="container-button">
+                    <button class="star-button">
+                        <img src="" alt="star">
+                    </button>
+                </div>
+                <div class="container-button">
+                    <button class="like-button">
+                        <img src="" alt="star">
+                    </button>
+                </div>
+                <div class="container-button">
+                    <button class="share-button">
+                        <img src="" alt="star">
+                    </button>
+                </div>
+            </div>
+        </section>
 
-        <div class="description-div">
+        <section class="description-div">
             <h2>Descripción</h2>
             <p>
                 El 4 en línea es un juego para dos jugadores en el que cada uno elige un tipo de ficha, en este caso Batman o Superman. El objetivo es ser el primero en formar una línea de cuatro fichas consecutivas en cualquier dirección: horizontal, vertical o diagonal. ¡Los jugadores deben pensar estratégicamente!
             </p>
-        </div>
+        </section>
 
-        <div class="contenido-section">
+        <section class="contenido-section">
             <div class="card-contenido-div">
-                <img src="batman-vs-superman.jpg" alt="Batman vs Superman">
+                <img src="img/BatmanYSuperman.jpeg" alt="Batman vs Superman">
                 <div class="card-contenido-texto-div">
                     <h3>Batman vs Superman: el origen de la justicia</h3>
                     <p>Descubre el enfrentamiento épico entre el Caballero Oscuro y el Hombre de Acero. ¿Quién ganará?</p>
@@ -41,14 +80,14 @@
             </div>
 
             <div class="card-contenido-div">
-                <img src="the-batman.jpg" alt="The Batman">
+                <img src="img/The batman.jpeg" alt="The Batman">
                 <div class="card-contenido-texto-div">
                     <h3>The Batman</h3>
                     <p>Explora el lado oscuro de Gotham en esta nueva y emocionante reinvención del Caballero Oscuro.</p>
                     <a href="#">En YouTube Trailer</a>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
 
     <section class="comments-section">
