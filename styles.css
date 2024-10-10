@@ -1,35 +1,35 @@
 :root {
-        /* Colores */
-        --color-primario: #000000; /* Color principal: negro */
-        --color-secundario: #ffffff; /* Blanco puro */
+    /* Colores */
+    --color-primario: #000000; /* Color principal: negro */
+    --color-secundario: #ffffff; /* Blanco puro */
         
-        /* Tonos de azul */
-        --color-azul-claro: #8ecae6;
-        --color-azul-medio: #219ebc;
-        --color-azul-oscuro: #023047;
+    /* Tonos de azul */
+    --color-azul-claro: #8ecae6;
+    --color-azul-medio: #219ebc;
+    --color-azul-oscuro: #023047;
       
-        /* Tonos de blanco */
-        --color-blanco-puro: #ffffff;
-        --color-blanco-grisaceo: #f0f0f0;
-        --color-blanco-apagado: #e0e0e0;
+    /* Tonos de blanco */
+    --color-blanco-puro: #ffffff;
+    --color-blanco-grisaceo: #f0f0f0;
+    --color-blanco-apagado: #e0e0e0;
       
-        /* Fondos */
-        --bg-primario: #101010; /* Fondo principal */
-        --bg-secundario: #282828; /* Fondo secundario */
-        --bg-azul-claro: #e0f7fa;
-        --bg-azul-oscuro: #102a43;
+    /* Fondos */
+    --bg-primario: #101010; /* Fondo principal */
+    --bg-secundario: #282828; /* Fondo secundario */
+    --bg-azul-claro: #e0f7fa;
+    --bg-azul-oscuro: #102a43;
       
-        /* Tipografía */
-        --tipografia-principal: "Poppins", sans-serif;
-        --tipografia-secundaria: "Roboto", sans-serif;
+    /* Tipografía */
+    --tipografia-principal: "Poppins", sans-serif;
+    --tipografia-secundaria: "Roboto", sans-serif;
       
-        /* Tamaños de fuente */
-        --font-size-xxl: 48px; /* Extra grande */
-        --font-size-xl: 40px; /* Muy grande */
-        --font-size-l: 32px; /* Grande */
-        --font-size-m: 24px; /* Mediano */
-        --font-size-s: 16px; /* Pequeño */
-        --font-size-xs: 12px; /* Extra pequeño */
+    /* Tamaños de fuente */
+    --font-size-xxl: 48px; /* Extra grande */
+    --font-size-xl: 40px; /* Muy grande */
+    --font-size-l: 32px; /* Grande */
+    --font-size-m: 24px; /* Mediano */
+    --font-size-s: 16px; /* Pequeño */
+    --font-size-xs: 12px; /* Extra pequeño */
 }
 
 
@@ -185,4 +185,435 @@ body {
     padding: 10px;
     background-color: #333;
     color: #aaa;
+}
+
+/* Sección Registrarse */
+.register-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    background: linear-gradient(to bottom, #ffffff, #3b79f1); 
+}
+
+.register-section .logo {
+    margin-bottom: 10px;
+}
+
+.register-section .logo img {
+    width: 200px; 
+    height: auto;
+}
+
+.register-section .login-box {
+    background: #1a3b8f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    width: 100%;
+    max-width: 400px; 
+}
+
+.register-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em; 
+}
+
+.register-section label {
+    display: block; 
+    text-align: left; 
+    margin: 10px 0 5px; 
+}
+
+.register-section input[type="text"],
+.register-section input[type="email"],
+.register-section input[type="password"] {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: none; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+}
+
+.register-section .btn {
+    background: white; 
+    color: #1a3b8f; 
+    border: 2px solid #1a3b8f; 
+    border-radius: 5px; 
+    padding: 10px 30px; 
+    transition: background-color 0.3s ease; 
+    cursor: pointer; 
+}
+
+.register-section .btn:hover {
+    background: #689bfa; 
+}
+
+.register-section .captcha-container {
+    margin: 20px 0; 
+}
+
+.register-section .register-text {
+    margin-top: 15px; 
+    font-size: 0.9em; 
+}
+
+.register-section .login-link {
+    color: #020202; 
+    text-decoration: none; 
+    transition: color 0.3s ease; /* Efecto de transición */
+}
+
+.register-section .login-link:hover {
+    color: #ddd; /* Color al pasar el cursor */
+}
+
+/* Sección Login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #ffffff, #3b79f1);
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-section .logo {
+    margin-bottom: 10px;
+}
+
+.login-section .logo img {
+    width: 200px;
+    height: auto;
+}
+
+.login-section h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-section .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-section .login-box {
+    background: #1a3b8f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-section .login-box h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.login-section .login-box label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+.login-section .login-box input[type="email"],
+.login-section .login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-section .remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.login-section .remember-me input {
+    margin-right: 5px;
+}
+
+.login-section .form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.login-section .checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-section .checkbox-container span {
+    color: white;
+    margin-left: 5px;
+}
+
+.login-section .btn {
+    background: white;
+    color: #1a3b8f;
+    border: 2px solid #1a3b8f;
+    border-radius: 5px;
+    padding: 10px 30px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.login-section .btn:hover {
+    background: #689bfa;
+}
+
+/* Estilo del botón de login con Google */
+.login-section .google-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.login-section .btn-google {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-section .btn-google img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.login-section .btn-google:hover {
+    background-color: #689bfa;
+}
+
+.login-section .register-text {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.login-section .register-text a {
+    color: #add8e6;
+    text-decoration: none;
+}
+
+.login-section .register-text a:hover {
+    text-decoration: underline;
+}
+/*-----------------------------HEADER---------------------------------------*/
+.header_container{
+    display: flex;
+    padding: 1rem 2rem;
+    background-color: #2771CD;
+    justify-content: space-between;
+}
+
+.menu-hamburguesa {
+    width: 35px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .menu-hamburguesa span {
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff; /* Color líneas */
+    border-radius: 2px;
+  }
+
+.header__logo{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    max-width: 7rem;
+}
+  .barra-busq{
+    padding: 10px;
+    padding-right: 35px;
+    border-radius: 40px 0 0 40px;
+    border:0;
+    outline: none;
+    font-size: 1rem;
+  }
+
+  .lupa{
+    background-color: #FFA300;
+    padding: 11.6px;
+    position: absolute;
+    margin: auto;
+    border-radius: 0 40px 40px 0;
+    color: #000;
+    cursor: pointer;
+    border: none;
+  }
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Media Queries para Responsividad */
+
+/* (móviles) */
+@media (max-width: 480px) {
+    .login-section .login-box,
+    .register-section .login-box {
+        padding: 15px;
+        border-radius: 8px;
+        width: 90%; 
+    }
+
+    .login-section .login-box h2,
+    .register-section h2 {
+        font-size: 1.2em;
+    }
+
+    .login-section .btn, 
+    .register-section .btn, 
+    .login-section .btn-google {
+        padding: 8px;
+        font-size: 14px; 
+    }
+
+    .game-section img {
+        width: 200px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .login-section .login-box,
+    .register-section .login-box {
+        padding: 15px;
+        border-radius: 8px;
+        width: 90%; 
+    }
+
+    .login-section .login-box h2,
+    .register-section h2 {
+        font-size: 1.2em;
+    }
+
+    .login-section .btn, 
+    .register-section .btn, 
+    .login-section .btn-google {
+        padding: 8px;
+        font-size: 14px; 
+    }
+
+    .game-section img {
+        width: 200px; 
+    }
+
+    .movie {
+        width: 100%; 
+    }
+
+    .movies-section {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .comment {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+}
+
+/* (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .login-section .login-box,
+    .register-section .login-box {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .login-section .login-box h2,
+    .register-section h2 {
+        font-size: 1.4em;
+    }
+
+    .game-section img {
+        width: 250px; 
+    }
+
+    .movie {
+        width: 45%; 
+    }
+
+    .movies-section {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+    }
+
+    .comment {
+        flex-direction: row; 
+    }
+}
+
+/* (pantallas pequeñas de escritorio) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .login-section .login-box,
+    .register-section .login-box {
+        width: 80%; 
+        max-width: 400px;
+    }
+
+    .game-section img {
+        width: 300px; 
+    }
+
+    .movie {
+        width: 30%; 
+    }
+
+    .movies-section {
+        flex-wrap: wrap; 
+    }
+}
+
+/* (pantallas grandes de escritorio) */
+@media (min-width: 1025px) {
+    .login-section .login-box,
+    .register-section .login-box {
+        width: 400px; 
+    }
+
+    .movie {
+        width: 22%; 
+    }
+
+    .movies-section {
+        flex-direction: row; 
+    }
 }

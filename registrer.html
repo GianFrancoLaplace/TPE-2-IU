@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que el nombre de tu CSS coincida -->
+</head>
+<body>
+    <div class="register-section">
+        <div class="logo">
+            <img src="logo.png" alt="Logo"> <!-- Asegúrate de que el logo esté en la misma carpeta -->
+        </div>
+        <div class="login-box">
+            <h2>Regístrate</h2>
+            <form>
+                <label for="first-name">Nombre</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Introduce tu nombre" required>
+
+                <label for="last-name">Apellido</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Introduce tu apellido" required>
+
+                <label for="username">Usuario</label>
+                <input type="text" id="username" name="username" placeholder="Introduce tu usuario" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@hotmail.es" required>
+
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" required>
+
+                <label for="confirm-password">Repetir Contraseña</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Repite tu contraseña" required>
+
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+            <div class="captcha-container">
+                <p>Por favor, verifica que no eres un robot.</p>
+                <!-- Aquí iría el código del captcha -->
+            </div>
+            <div class="register-text">
+                Tienes cuenta? <a href="/login" class="login-link">Loguéate</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
