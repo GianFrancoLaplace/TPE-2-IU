@@ -172,7 +172,6 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-     
     height: 100%; 
     padding: 20px; 
     min-height: 100vh; 
@@ -180,8 +179,9 @@ p{
 }
 
 .register-section .logo {
+    display: flex;
     margin-bottom: 20px;
-    text-align: center; 
+    justify-content: center;
 }
 
 .register-section .logo img {
@@ -248,11 +248,20 @@ p{
 .register-section .login-link {
     color: #020202; 
     text-decoration: none; 
-    transition: color 0.3s ease; /* Efecto de transición */
+    transition: color 0.3s ease; 
 }
 
 .register-section .login-link:hover {
-    color: #ddd; /* Color al pasar el cursor */
+    color: #ddd; 
+}
+
+#error-message {
+    color: red;
+    display: none; /* Se muestra solo cuando las contraseñas no coinciden */
+}
+
+#captcha-message {
+    color: red;
 }
 
 /* Sección Login */
@@ -266,7 +275,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    justify-content: center; /* Centra verticalmente el contenido */
     background: linear-gradient(to bottom, #ffffff, #3b79f1);
     font-family: Arial, sans-serif;
     height: 100vh;
@@ -274,8 +283,9 @@ p{
 }
 
 .login-section .logo {
-    margin-bottom: 10px;
-    text-align: center; /* Centra el logo en el contenedor */
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 
 .login-section .logo img {
@@ -291,9 +301,11 @@ p{
 
 .login-section .login-container {
     display: flex;
+    flex-direction: column; /* Alinea el logo y la caja de login en columna */
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 400px;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -306,7 +318,6 @@ p{
     text-align: center;
     color: white;
     width: 100%;
-    max-width: 400px;
 }
 
 .login-section .login-box h2 {
