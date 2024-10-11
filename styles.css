@@ -190,10 +190,11 @@ p{
 }
 
 .register-section .login-box {
-    background: #1a3b8f; 
+     
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Sombras del conteiner */
+    background: rgba(26, 59, 143, 0.9); 
     text-align: center;
     color: white;
     width: 100%;
@@ -311,10 +312,10 @@ p{
 }
 
 .login-section .login-box {
-    background: #1a3b8f;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Sombras del conteiner */
+    background: rgba(26, 59, 143, 0.9); 
     text-align: center;
     color: white;
     width: 100%;
