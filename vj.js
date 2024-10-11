@@ -13,7 +13,7 @@ function verificarCaptcha() {
 
 
 function validarFormulario(event) {
-    event.preventDefault(); // Evita que el formulario se envíe inmediatamente
+    event.preventDefault(); 
 
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
@@ -21,7 +21,7 @@ function validarFormulario(event) {
     const captchaMessage = document.getElementById('captcha-message');
     const errorMessage = document.getElementById('error-message');
 
-    // Texto esperado del CAPTCHA (ahora es "wvphnh")
+    
     const captchaCorrecto = 'wvphnh';
 
     // Validación de las contraseñas
@@ -44,3 +44,48 @@ function validarFormulario(event) {
         window.location.href = 'login.html'; // Redirige a la página de login
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loading = document.getElementById("loading");
+    const mainContainer = document.querySelector(".main-container");
+    const loadingPercentage = document.createElement('div');
+    loadingPercentage.classList.add('loading-percentage');
+    loading.appendChild(loadingPercentage);
+
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += 2; 
+        loadingPercentage.textContent = `Cargando... ${progress}%`;
+
+        if (progress >= 100) {
+            clearInterval(interval);
+            loading.style.display = 'none'; // Oculta el contenedor de carga
+            mainContainer.style.display = 'block'; // Muestra el contenido principal
+        }
+    }, 100);
+});
+
+function CheckLogin(event) {
+    event.preventDefault(); 
+    
+    // Obtiene los valores de los campos
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Verifica que los campos no estén vacíos
+    if (email && password) {
+        
+
+        // Redirige a home.html si todo es correcto
+        window.location.href = 'home.html';
+    } else {
+        alert("Por favor, completa todos los campos."); 
+    }
+}
+
+function redireccionarAlHome() {
+    window.location.href = 'home.html'; // Redirige a home.html al hacer clic en el botton Ingresa con Google
+}
+
+
+

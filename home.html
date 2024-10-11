@@ -4,35 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7964d7a07e.js" crossorigin="anonymous"></script>
-    <title>Home</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <title>Home</title>
 </head>
 <body>
     <header>
         <div class="header_container">
-
             <div class="menu-hamburguesa">
                 <span></span>
                 <span></span>
                 <span></span>
-              </div>
-            
+            </div>
             <div class="logo_container">
                 <a href="home.html" class="link-logo"><img src="./img/Logo_GAMESTORE.png" class="logo" alt="logo-game-store"></a>
             </div>
-            
             <div class="busqueda_container">
                 <input class="barra-busq" type="text" placeholder="Buscar...">
                 <button class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-
-            <!-- Carrito y Cuenta -->
             <div class="user-options">
                 <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="#" class="account"><i class="fa-solid fa-user"></i></a>
             </div>
         </div>
     </header>
+    
+
+    <div class="loading-container" id="loading">
+        <div class="loading-circle"></div> 
+    </div>
+
     <div class="main-container">
         <!-- Carrusel 1 -->
         <section class="carousel carousel-1">
@@ -82,6 +84,7 @@
             <div class="arrow right-arrow">›</div>
         </section>
     </div>
-    
+
+    <script src="vj.js"></script> 
 </body>
 </html>

@@ -73,6 +73,47 @@ p{
 .main-content {
     padding: 5px;
 }
+/* Estilos del loading */
+
+/* Estilos para la pantalla de carga */
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.loading-circle {
+    border: 6px solid #ddd;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-percentage {
+    font-size: 18px;
+    color: #3498db;
+}
+
+/* Oculta el contenido principal inicialmente */
+.main-container {
+    display: none;
+}
 
 /* VJ */
 .game-section{
