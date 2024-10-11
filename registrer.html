@@ -36,12 +36,18 @@
             </form>
             <div class="captcha-container">
                 <p>Por favor, verifica que no eres un robot.</p>
-                <!-- Aquí iría el código del captcha -->
+                <label for="captcha-input">Por favor, introduce el texto que ves en la imagen:</label>
+                <img src="captcha.png" alt="CAPTCHA" class="captcha-image">
+                <input type="text" id="captcha-input" name="captcha" placeholder="Ingresa el texto del CAPTCHA" required>
+                <button onclick="verificarCaptcha()">Verificar</button>
+                <p id="captcha-message" class="message"></p>
             </div>
             <div class="register-text">
                 Tienes cuenta? <a href="/login" class="login-link">Loguéate</a>
             </div>
         </div>
     </div>
+    <script src="vj.js"></script>
 </body>
 </html>
+
