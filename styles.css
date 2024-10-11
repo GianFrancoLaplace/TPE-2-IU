@@ -598,82 +598,140 @@ p{
     font-size: 1rem;
 }
 
-/*--------------------------------------------BODY HOME--------------------------------------------*/
-.main-container {
-    padding: 10px;
+/*--------------------------------------------HOME--------------------------------------------*/
+.nombre-vj{
+    color: #000;
 }
 
-/* Estilos para los carruseles */
-.carousel {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+.main-container{
+    background: #858585;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+    flex-wrap:wrap ;
+}
+
+.carousel{
+    max-width: 1200px;
+	width: 80%;
+	margin: auto;
+}
+
+/*---------------------------CAROUSELES-----------------------------*/
+
+/*XXL*/
+.carousel-container-xxl, .carousel-container{
     position: relative;
 }
 
-.cards-container {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-}
-
-.card {
-    background-color: #ddd;
-    border-radius: 5px;
-}
-
-/* Botones de flecha */
-.arrow {
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-    user-select: none;
+.carousel-btn-anterior-xxl, .carousel-btn-siguiente-xxl,
+.carousel-btn-anterior-xl, .carousel-btn-siguiente-xl{
+    color: red;
+    font-size: 2rem;
     position: absolute;
-    z-index: 1;
+    display: block;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%); /* Centra el botón verticalmente */
+    border: none;
+    cursor: pointer;
+    line-height: 1rem;
+    text-align: center;
+    background: none;
+    opacity: 20%;
 }
 
-.left-arrow {
-    left: 0;
+.carousel-btn-anterior-xxl,
+.carousel-btn-anterior-xl{
+    left: -30px;
 }
 
-.right-arrow {
-    right: 0;
+.carousel-btn-siguiente-xxl,
+.carousel-btn-siguiente-xl{
+    right: -30px;
 }
 
-/* Carrusel 1 (cards más grandes) */
-.carousel-1 .cards-container .card {
-    width: 90vw; /* Tamaño móvil: ancho casi completo */
-    height: 140px;
+.carousel-btn-anterior-xxl:hover, .carousel-btn-siguiente-xxl:hover,
+.carousel-btn-anterior-xl:hover, .carousel-btn-siguiente-xl:hover{
+    opacity: 100%;
 }
 
-.carousel-1 .arrow {
-    height: 140px;
+/*Normal*/
+
+.carousel-btn-anterior-n1, .carousel-btn-siguiente-n1,
+.carousel-btn-anterior-n2, .carousel-btn-siguiente-n2{
+    color: rgb(0, 185, 0);
+    font-size: 1rem;
+    position: absolute;
+    display: block;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%); /* Centra el botón verticalmente */
+    border: none;
+    cursor: pointer;
+    line-height: 1rem;
+    text-align: center;
+    background: none;
+    opacity: 20%;
 }
 
-/* Carrusel 2 y 3 (cards pequeñas) */
-.carousel-2 .cards-container .card,
-.carousel-3 .cards-container .card {
-    width: 45vw; /* Tamaño móvil: la mitad del ancho */
-    height: 90px;
+.carousel-btn-anterior-n1,
+.carousel-btn-anterior-n2{
+    left: -30px;
 }
 
-.carousel-2 .arrow, .carousel-3 .arrow {
-    height: 90px;
+.carousel-btn-siguiente-n1,
+.carousel-btn-siguiente-n2{
+    right: -30px;
 }
 
-/* Carrusel 4 (cards más altas) */
-.carousel-4 .cards-container .card {
-    width: 45vw; /* Tamaño móvil: la mitad del ancho */
-    height: 180px;
+.carousel-btn-anterior-n1:hover, .carousel-btn-siguiente-n1:hover,
+.carousel-btn-anterior-n2:hover, .carousel-btn-siguiente-n2:hover{
+    opacity:100%;
 }
 
-.carousel-4 .arrow {
-    height: 180px;
+.carousel-indicador,
+.carousel-indicador-xl{
+    background-color: var(--color-primario-oscuro);
+    width: max-content;
+    border-radius: 25px;
+}
+.carousel-indicador .glider-dot,
+.carousel-indicador-xl .glider-dot {
+	background: var(--color-secundario);
+	opacity: .2;
+}
+
+.carousel-indicador .glider-dot:hover,
+.carousel-indicador-xl .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel-indicador .glider-dot.active,
+.carousel-indicador-xl .glider-dot.active {
+	opacity: 1;
+}
+
+.carousel-indicador-n1,
+.carousel-indicador-n2{
+    background-color: var(--color-primario-oscuro);
+    width: max-content;
+    border-radius: 25px;
+}
+.carousel-indicador-n1 .glider-dot,
+.carousel-indicador-n2 .glider-dot{
+	background: var(--color-secundario);
+	opacity: .2;
+}
+
+.carousel-indicador-n1 .glider-dot:hover,
+.carousel-indicador-n2 .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel-indicador-n1 .glider-dot.active,
+.carousel-indicador-n2 .glider-dot.active{
+	opacity: 1;
 }
 
 
@@ -912,36 +970,4 @@ p{
     .header_container{
         max-width: 100%;
     }
-
-    /*---------------home----------*/
-        /* Carrusel 1 (cards grandes) */
-        .carousel-1 .cards-container .card {
-            width: 440px;
-            height: 250px;
-        }
-    
-        .carousel-1 .arrow {
-            height: 250px;
-        }
-    
-        /* Carrusel 2 y 3 (cards pequeñas) */
-        .carousel-2 .cards-container .card,
-        .carousel-3 .cards-container .card {
-            width: 160px;
-            height: 138px;
-        }
-    
-        .carousel-2 .arrow, .carousel-3 .arrow {
-            height: 138px;
-        }
-    
-        /* Carrusel 4 (cards grandes verticales) */
-        .carousel-4 .cards-container .card {
-            width: 220px;
-            height: 325px;
-        }
-    
-        .carousel-4 .arrow {
-            height: 325px;
-        }
 }
