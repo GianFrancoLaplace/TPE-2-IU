@@ -475,7 +475,84 @@ p{
     font-size: 1rem;
 }
 
-/*----------------------------------------------------------------------------------------*/
+/*--------------------------------------------BODY HOME--------------------------------------------*/
+.main-container {
+    padding: 10px;
+}
+
+/* Estilos para los carruseles */
+.carousel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.cards-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.card {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+/* Botones de flecha */
+.arrow {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+/* Carrusel 1 (cards más grandes) */
+.carousel-1 .cards-container .card {
+    width: 90vw; /* Tamaño móvil: ancho casi completo */
+    height: 140px;
+}
+
+.carousel-1 .arrow {
+    height: 140px;
+}
+
+/* Carrusel 2 y 3 (cards pequeñas) */
+.carousel-2 .cards-container .card,
+.carousel-3 .cards-container .card {
+    width: 45vw; /* Tamaño móvil: la mitad del ancho */
+    height: 90px;
+}
+
+.carousel-2 .arrow, .carousel-3 .arrow {
+    height: 90px;
+}
+
+/* Carrusel 4 (cards más altas) */
+.carousel-4 .cards-container .card {
+    width: 45vw; /* Tamaño móvil: la mitad del ancho */
+    height: 180px;
+}
+
+.carousel-4 .arrow {
+    height: 180px;
+}
+
 
 /* Media Queries para Responsividad */
 
@@ -708,4 +785,40 @@ p{
     .user-options {
         display: flex;
     }
+
+    .header_container{
+        max-width: 100%;
+    }
+
+    /*---------------home----------*/
+        /* Carrusel 1 (cards grandes) */
+        .carousel-1 .cards-container .card {
+            width: 440px;
+            height: 250px;
+        }
+    
+        .carousel-1 .arrow {
+            height: 250px;
+        }
+    
+        /* Carrusel 2 y 3 (cards pequeñas) */
+        .carousel-2 .cards-container .card,
+        .carousel-3 .cards-container .card {
+            width: 160px;
+            height: 138px;
+        }
+    
+        .carousel-2 .arrow, .carousel-3 .arrow {
+            height: 138px;
+        }
+    
+        /* Carrusel 4 (cards grandes verticales) */
+        .carousel-4 .cards-container .card {
+            width: 220px;
+            height: 325px;
+        }
+    
+        .carousel-4 .arrow {
+            height: 325px;
+        }
 }
