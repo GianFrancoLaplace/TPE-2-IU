@@ -1,8 +1,8 @@
 window.addEventListener('load', function(){
-
+  //xxl
     new Glider(document.querySelector('.carousel-fila-xxl'),{
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         dots: '.carousel-indicador',
         arrows: {
           prev: '.carousel-btn-anterior-xxl',
@@ -20,8 +20,8 @@ window.addEventListener('load', function(){
               // ventanas >= 1024px
               breakpoint: 1024,
               settings: {
-                slidesToShow: 6,
-                slidesToScroll: 6,
+                slidesToShow: 4,
+                slidesToScroll: 4,
               }
             }
         ]
@@ -95,8 +95,8 @@ window.addEventListener('load', function(){
               // ventanas >= 800px
               breakpoint: 800,
               settings: {
-                slidesToShow: '5',
-                slidesToScroll: '5',
+                slidesToShow: '4',
+                slidesToScroll: '4',
               }
             },{
               // ventanas >= 1024px

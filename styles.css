@@ -5,22 +5,23 @@
     --color-primario-oscuro: #194884;
 
     --color-secundario: #FFA300;
-    --color-secundario-claro: #FFC966
-    --color-secundario-oscuro: #FFA300
+    --color-secundario-claro: #FFC966;
+    --color-secundario-oscuro: #FFA300;
       
     /* Tonos de blanco */
     --color-blanco-grisaceo: #484242;
     --color-blanco-apagado: #e0e0e0;
+
+    --color-nombres-vj:#4d6781;
       
     /* Fondos */
     --bg-primario: #101010; /* Fondo principal */
     --bg-secundario: #282828; /* Fondo secundario */
-    --bg-azul-claro: #e0f7fa;
+    --bg-azul-claro: #D0EAF5;
     --bg-azul-oscuro: #102a43;
       
     /* Tipografía */
-    --tipografia-principal: "Poppins", sans-serif;
-    --tipografia-secundaria: "Roboto", sans-serif;
+    --tipografia-principal: Arial;
       
     /* Tamaños de fuente */
     --font-size-xxl: 48px; /* Extra grande */
@@ -640,7 +641,7 @@ p{
     background-color: white;
     border-radius: 25px;
     padding: 5px 10px;
-    width: 200px;
+    width: 80px;
 }
 .barra-busq{ /*input*/
     width: 100%;
@@ -666,26 +667,66 @@ p{
     font-size: 1rem;
 }
 
-/*--------------------------------------------HOME--------------------------------------------*/
-.nombre-vj{
-    color: #000;
-}
-
+/*---------------------------HOME--------------------*/
 .main-container{
-    background: #858585;
+    background: var(--bg-azul-claro);
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
     flex-wrap:wrap ;
+    padding-top: 2rem;
 }
+
+.titulo-vj{
+    color: var(--color-primario-oscuro);
+}
+
+h1.titulo-vj{
+    font-size: var(--font-size-m);
+}
+
+h2.titulo-vj{
+    font-size: var(--font-size-s);
+}
+
+/*---------------------------CAROUSELES-----------------------------*/
 
 .carousel{
     max-width: 1200px;
 	width: 80%;
 	margin: auto;
+    background-color: #ffffff;
+    padding: 0px 60px;
 }
 
-/*---------------------------CAROUSELES-----------------------------*/
+
+
+        /*cards ajustes------------------------------*/
+        .nombre-vj{
+            color: var(--color-nombres-vj);
+            font-weight: bold;
+            margin: 0;
+            padding: 7px 0 0 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .carousel-card,
+        .carousel-card-xl,
+        .carousel-card-xxl{
+            margin: 0px 4px;
+        }
+        
+        .carousel-card-xxl img,
+        .carousel-card-xl img{
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .carousel-card img{
+            width: 100%;
+        }
+
 
 /*XXL*/
 .carousel-container-xxl, .carousel-container{
@@ -694,7 +735,7 @@ p{
 
 .carousel-btn-anterior-xxl, .carousel-btn-siguiente-xxl,
 .carousel-btn-anterior-xl, .carousel-btn-siguiente-xl{
-    color: red;
+    
     font-size: 2rem;
     position: absolute;
     display: block;
@@ -706,7 +747,7 @@ p{
     line-height: 1rem;
     text-align: center;
     background: none;
-    opacity: 20%;
+    opacity: 40%;
 }
 
 .carousel-btn-anterior-xxl,
@@ -724,12 +765,15 @@ p{
     opacity: 100%;
 }
 
+.carousel-fila-n1{
+    height: max-content;
+}
+
 /*Normal*/
 
 .carousel-btn-anterior-n1, .carousel-btn-siguiente-n1,
 .carousel-btn-anterior-n2, .carousel-btn-siguiente-n2{
-    color: rgb(0, 185, 0);
-    font-size: 1rem;
+    font-size: 1.5rem;
     position: absolute;
     display: block;
     height: 100%;
@@ -740,7 +784,7 @@ p{
     line-height: 1rem;
     text-align: center;
     background: none;
-    opacity: 20%;
+    opacity: 40%;
 }
 
 .carousel-btn-anterior-n1,
@@ -758,15 +802,12 @@ p{
     opacity:100%;
 }
 
-.carousel-indicador,
-.carousel-indicador-xl{
-    background-color: var(--color-primario-oscuro);
-    width: max-content;
-    border-radius: 25px;
-}
 .carousel-indicador .glider-dot,
 .carousel-indicador-xl .glider-dot {
-	background: var(--color-secundario);
+    display: block;
+    width: .5rem;
+    height: .5rem;
+	background: var(--color-primario-oscuro);
 	opacity: .2;
 }
 
@@ -778,17 +819,15 @@ p{
 .carousel-indicador .glider-dot.active,
 .carousel-indicador-xl .glider-dot.active {
 	opacity: 1;
+    background-color: var(--color-primario-oscuro);
 }
 
-.carousel-indicador-n1,
-.carousel-indicador-n2{
-    background-color: var(--color-primario-oscuro);
-    width: max-content;
-    border-radius: 25px;
-}
 .carousel-indicador-n1 .glider-dot,
 .carousel-indicador-n2 .glider-dot{
-	background: var(--color-secundario);
+    display: block;
+    width: .5rem;
+    height: .5rem;
+	background: var(--color-primario-oscuro);
 	opacity: .2;
 }
 
