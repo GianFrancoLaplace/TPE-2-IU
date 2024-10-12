@@ -14,7 +14,7 @@
         <div class="login-container">
             <div class="login-box">
                 <h2>ENTRA A GAME STORE</h2>
-                <form>
+                <form onsubmit="CheckLogin(event)"> 
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="you@email.com" required>
 
@@ -29,18 +29,20 @@
                         <button class="btn" type="submit">INGRESAR</button>
                     </div>
 
+                    
                     <div class="google-login">
-                        <button class="btn-google" type="button">
+                        <button class="btn-google" type="button" onclick="redireccionarAlHome()"> 
                             <img src="google-icon.png" alt="Google Icon">
                             Ingresa con Google
                         </button>
                     </div>
 
-                    <p class="register-text">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+                    <p class="register-text">¿No tienes cuenta? <a href="registrer.html">Regístrate</a></p>
                 </form>
             </div>
         </div>
     </div>
+    <script src="vj.js"></script>
 </body>
 </html>
 
