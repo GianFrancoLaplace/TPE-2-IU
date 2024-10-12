@@ -71,11 +71,6 @@ p{
     color: white;
 }
 
-/* VJ */
-
-.main-content {
-    padding: 5px;
-}
 /* Estilos del loading */
 
 /* Estilos para la pantalla de carga */
@@ -118,6 +113,16 @@ p{
     display: none;
 }
 
+/* VJ */
+
+.main-content {
+    padding: 5px;
+}
+
+.titulos-section{
+    display: flex;
+}
+
 .game-section{
     width: 100%;
     margin-bottom: 30px;
@@ -144,6 +149,10 @@ p{
 }
 
 /* VJ - CONTENIDOS RELACIONADOS */
+
+.card-contenido-div:nth-child(2){
+    margin-top: 16px;
+}
 
 .card-contenido-texto-div h3{
     font-family: var(--tipografia-principal);
@@ -797,7 +806,7 @@ p{
 /* Media Queries para Responsividad */
 
 /* (móviles) */
-@media (max-width: 480px) {
+@media (min-width: 320px) {
     /* Login */
 
     .login-section .login-box,
@@ -819,6 +828,11 @@ p{
         font-size: 14px; 
     }
 
+    .comment {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
     
     /* VJ */
 
@@ -826,6 +840,22 @@ p{
 
     .game-section{
         width: 100%;
+    }
+
+    .titulos-section-breadscrums-div span{
+        font-size: var(--font-size-xxs);
+    }
+
+    .titulos-section-breadscrums-div h1{
+        font-size: var(--font-size-s);
+        color: #000;
+        margin: 0;
+    }
+
+    .titulos-section-breadscrums-div p{
+        font-size: var(--font-size-xxs);
+        color: #000;
+        margin: 0;
     }
 
     .tableroyanucios-div{
@@ -863,10 +893,6 @@ p{
         margin: 24px 0;
     }
 
-    .card-contenido-div:nth-child(2){
-        margin-top: 16px;
-    }
-
     .card-contenido-texto-div h3{
         font-size: var(--font-size-s);
         font-family: var(--tipografia-principal);
@@ -895,41 +921,6 @@ p{
         width: 24px;
         height: 24px;
         margin: 8px 20px 0px 0px;
-    }
-}
-
-@media (max-width: 480px) {
-    .login-section .login-box,
-    .register-section .login-box {
-        padding: 15px;
-        border-radius: 8px;
-        width: 90%; 
-    }
-
-    .login-section .login-box h2,
-    .register-section h2 {
-        font-size: 1.2em;
-    }
-
-    .login-section .btn, 
-    .register-section .btn, 
-    .login-section .btn-google {
-        padding: 8px;
-        font-size: 14px; 
-    }
-
-    .movie {
-        width: 100%; 
-    }
-
-    .movies-section {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    .comment {
-        flex-direction: column; 
-        align-items: flex-start; 
     }
 }
 
