@@ -128,20 +128,15 @@ p{
     margin-bottom: 30px;
 }
 
-.tableroyanucios-div{
+.tableroyanuncios-div{
     display: flex;
     width: 100%;
-    height: 80vh;
     justify-content: space-between;
+    align-items: center;
 }
 
 .game-section img {
     width: 100%; 
-}
-
-.tableroyanucios-div{
-    height: 200px;
-    width: 100%;
 }
 
 .buttons-div{
@@ -152,6 +147,13 @@ p{
 
 .card-contenido-div:nth-child(2){
     margin-top: 16px;
+}
+
+.card-contenido-texto-div{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 
 .card-contenido-texto-div h3{
@@ -835,27 +837,48 @@ p{
 
     
     /* VJ */
+    
+    /* Titulos */
+    .titulos-section{
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .titulos-section-img-div { 
+        display: flex;
+        align-items: center; 
+        margin-right: 8px;
+    }
+
+    .titulos-section-breadscrums-div{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    .titulos-section-breadscrums-div span{
+        font-size: 8px;
+        width: 80%;
+    }
+
+    .titulos-section-breadscrums-div h1{
+        font-size: var(--font-size-xs);
+        color: #000;
+        width: 80%;
+        margin: 0;
+    }
+
+    .titulos-section-breadscrums-div p{
+        font-size: 8px;
+        color: #000;
+        margin: 0;
+    }
 
     /* 4 en Línea */
 
     .game-section{
         width: 100%;
-    }
-
-    .titulos-section-breadscrums-div span{
-        font-size: var(--font-size-xxs);
-    }
-
-    .titulos-section-breadscrums-div h1{
-        font-size: var(--font-size-s);
-        color: #000;
-        margin: 0;
-    }
-
-    .titulos-section-breadscrums-div p{
-        font-size: var(--font-size-xxs);
-        color: #000;
-        margin: 0;
     }
 
     .tableroyanucios-div{
@@ -876,6 +899,7 @@ p{
 
     .description-div{
         padding: 16px;
+        border-radius: 8px;
     }
 
     .description-div h2{
@@ -891,6 +915,11 @@ p{
 
     .contenido-section{
         margin: 24px 0;
+    }
+
+    .captcha-container{
+        display: flex;
+        justify-content: space-between;
     }
 
     .card-contenido-texto-div h3{
@@ -925,7 +954,7 @@ p{
 }
 
 /* (tablets) */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) {
     .login-section .login-box,
     .register-section .login-box {
         width: 90%;
@@ -944,18 +973,49 @@ p{
     .description-div p {
         font-size: var(--font-size-s);
     }
+
+    .titulos-section-breadscrums-div{
+        width: 400px;
+    }
+
+    .titulos-section-breadscrums-div span{
+        display: block;
+        width: 100%;
+    }
+
+    .titulos-section-breadscrums-div h1{
+        display: block;
+        width: 100%;
+    }
+
+    .description-div{
+        width: 80%;
+        margin: 0px auto;
+    }
 }
 
 /* (pantallas pequeñas de escritorio) */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) {
     .login-section .login-box,
     .register-section .login-box {
         width: 80%; 
         max-width: 400px;
     }
 
-    .description-div{
-        border-radius: 2%;
+    .titulos-section-breadscrums-div{
+        width: 450px;
+    }
+
+    .titulos-section-breadscrums-div span{
+        display: block;
+        width: 80%;
+        font-size: var(--font-size-xxs);
+    }
+
+    .titulos-section-breadscrums-div h1{
+        display: block;
+        width: 80%;
+        font-size: var(--font-size-s);
     }
 }
 
@@ -980,5 +1040,20 @@ p{
 
     .header_container{
         max-width: 100%;
+    }
+
+    .tableroyanuncios-div{
+        display: flex;
+    }
+
+    .anuncio-div{
+        display: block;
+        width: 15%;
+        height: 60%;
+        margin: 0 16px;
+    }
+
+    .anuncio-div img{
+        height: 300px;
     }
 }
