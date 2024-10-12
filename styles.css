@@ -29,6 +29,7 @@
     --font-size-m: 24px; /* Mediano */
     --font-size-s: 16px; /* Pequeño */
     --font-size-xs: 12px; /* Extra pequeño */
+    --font-size-xxs: 10px; /* Extra pequeño */
 }
 
 body{
@@ -70,15 +71,14 @@ p{
     color: white;
 }
 
+/* VJ */
+
 .main-content {
     padding: 5px;
 }
 
-/* VJ */
 .game-section{
     width: 100%;
-    display: block;
-    align-items: center;
     margin-bottom: 30px;
 }
 
@@ -90,7 +90,39 @@ p{
 }
 
 .game-section img {
-    width: 300px;
+    width: 100%; 
+}
+
+.tableroyanucios-div{
+    height: 200px;
+    width: 100%;
+}
+
+.buttons-div{
+    display: flex;
+}
+
+/* VJ - CONTENIDOS RELACIONADOS */
+
+.card-contenido-texto-div h3{
+    font-family: var(--tipografia-principal);
+    text-align: center;
+}
+
+.card-contenido-texto-div p{
+    font-family: var(--tipografia-principal);
+    text-align: center;
+}
+
+.card-contenido-texto-div a{
+    font-family: var(--tipografia-principal);
+    color: var(--color-secundario);
+}
+
+.container-button{
+    border: #000;
+    border-radius: 4px;
+    background-color: var(--color-primario);
 }
 
 .description {
@@ -98,7 +130,35 @@ p{
     margin-bottom: 30px;
 }
 
+.description-div{
+    background-color: var(--color-primario-oscuro);
+    border-radius: 5%;
+}
+
 .contenido-link{
+    text-align: center;
+}
+
+.card-contenido-div{
+    display: flex;
+    background-color: var(--color-primario);
+    border-radius: 5px;
+}
+
+.card-contenido-img-div{
+    width: 35%;
+}
+
+.card-contenido-img-div img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-contenido-texto-div{
+    padding: 8px;
+}
+
+.card-contenido-texto-div h3{
     text-align: center;
 }
 
@@ -114,7 +174,6 @@ p{
 }
 
 .comments-section {
-    width: 60%;
     margin-bottom: 30px;
 }
 
@@ -651,44 +710,11 @@ p{
 
     
     /* VJ */
-    .game-section img {
-        width: 100%; 
-    }
 
-    .tablero-div{
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
+    /* 4 en Línea */
 
     .game-section{
         width: 100%;
-    }
-
-    .anuncio-div{
-        display: none;
-    }
-
-    .description-div{
-        background-color: var(--color-primario-oscuro);
-        border-radius: 5%;
-        padding: 16px;
-    }
-
-    .description-div h2{
-        font-family: var(--tipografia-principal);
-        font-size: var(--font-size-xl);
-        color: white;
-    }
-
-    .description-div p{
-        font-family: var(--tipografia-principal);
-        font-size: var(--font-size-s);
-        color: white;
-    }
-
-    .buttons-div{
-        display: flex;
     }
 
     .tableroyanucios-div{
@@ -696,41 +722,52 @@ p{
         width: 100%;
     }
 
+    .tablero-div{
+        width: 100%;
+        align-items: center;
+    }
+
+    .anuncio-div{
+        display: none;
+    }
+
+    /* VJ - Descripción */
+
+    .description-div{
+        padding: 16px;
+    }
+
+    .description-div h2{
+        font-size: var(--font-size-xl);
+    }
+
+    .description-div p{
+        font-size: var(--font-size-s);
+    }
+
+
     /* VJ - CONTENIDOS RELACIONADOS */
 
     .contenido-section{
         margin: 24px 0;
     }
 
-    .card-contenido-div{
-        align-items: center;
-        display: flex;
-        background-color: var(--color-primario);
-        border-radius: 5px;
-        padding: 8px;
-    }
-
     .card-contenido-div:nth-child(2){
         margin-top: 16px;
     }
 
-    .card-contenido-div img{
-        max-width: 100px;
-        max-height: 100px;
-    }
-
     .card-contenido-texto-div h3{
-        font-size: var(--font-size-m);
+        font-size: var(--font-size-s);
         font-family: var(--tipografia-principal);
-        color: white;
         text-align: center;
+        margin: 4px 0px 4px;
     }
 
     .card-contenido-texto-div p{
         font-size: var(--font-size-xs);
         font-family: var(--tipografia-principal);
-        color: white;
         text-align: center;
+        margin: 4px 0px 4px;
     }
 
     .card-contenido-texto-div a{
@@ -798,21 +835,12 @@ p{
         font-size: 1.4em;
     }
 
-    .game-section img {
-        width: 250px; 
+    .card-contenido-div:nth-child(2){
+        margin-top: 16px;
     }
 
-    .movie {
-        width: 45%; 
-    }
-
-    .movies-section {
-        flex-direction: row; 
-        flex-wrap: wrap; 
-    }
-
-    .comment {
-        flex-direction: row; 
+    .description-div p {
+        font-size: var(--font-size-s);
     }
 }
 
@@ -824,16 +852,8 @@ p{
         max-width: 400px;
     }
 
-    .game-section img {
-        width: 300px; 
-    }
-
-    .movie {
-        width: 30%; 
-    }
-
-    .movies-section {
-        flex-wrap: wrap; 
+    .description-div{
+        border-radius: 2%;
     }
 }
 
