@@ -729,6 +729,49 @@ h2.titulo-vj{
             width: 100%;
         }
 
+        .carousel-card{
+            position: relative;
+            overflow: hidden;
+    
+        }
+
+        .carousel-card img{
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+            opacity: 0; /* Por defecto, la superposición es invisible */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.1s ease;
+        }
+        .play-btn {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none; /* Oculto por defecto */
+        }
+        /* Efecto hover en las cards */
+        .carousel-card:hover .overlay {
+            opacity: 1; /* La superposición se hace visible */
+        }
+
+        /* Mostrar el botón al hacer hover */
+        .carousel-card:hover .play-btn {
+            display: block; /* El botón se muestra en hover */
+        }
+        
+
 
 /*XXL*/
 .carousel-container-xxl, .carousel-container{
