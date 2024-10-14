@@ -1198,62 +1198,78 @@ h2.titulo-vj{
 
 /* ----------------FOOTER----------------------- */
 
-.fat-footer {
-    background-color: var(--color-primario);
-    color: #ffffff;
-    padding: 30px 0;
+/*------FOOTER--------*/
+.footer {
+    background-color: #2771CD;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-sections {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    text-align: center;
-    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 10px; /* Menos espacio entre las secciones y el copyright */
 }
 
-.fat-footer .footer-section {
-    flex: 1 1 20%; /* Se adapta a pantallas pequeñas y asegura que las secciones no se apilen */
-    margin: 0; /* Sin margen adicional */
-    padding: 0; /* Sin padding adicional */
+.footer-section {
+    margin: 0; /* Sin margen para una separación mínima */
 }
 
-.fat-footer h2 {
+.footer-section h4 {
+    margin-bottom: 5px; /* Menor separación entre el título y la lista */
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin: 3px 0; /* Menor separación entre los elementos de la lista */
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-section a:hover {
+    color: #ffd700; /* Cambia a un color dorado al pasar el cursor */
+    transform: scale(1.1); /* Efecto de aumento al pasar el cursor */
+}
+
+.footer-content p {
+    margin: 10px 0 0; /* Espaciado reducido entre el texto de copyright y las secciones */
     font-size: 16px;
-    margin: 0; /* Sin margen debajo del título */
-    font-weight: bold;
 }
 
-.fat-footer p,
-.fat-footer ul {
-    margin: 0; /* Sin margen adicional */
-    font-size: 14px; /* Tamaño uniforme para todas las secciones */
-    padding: 0; /* Sin padding en listas */
+.social-media {
+    margin-top: 10px;
 }
 
-.fat-footer ul {
-    list-style: none; /* Elimina los puntos de la lista */
-    margin: 5px; /* Sin margen */
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.fat-footer ul li {
-    margin: 5px; /* Sin margen entre elementos de la lista */
-    font-size: 14px;
+.social-media a:hover {
+    color: #ffd700; /* Cambia a un color dorado al pasar el cursor */
+
+
 }
-
-.footer-bottom {
-    width: 100%;
-    border-top: 1px solid #ffffff;
-    margin-top: 5px; /* Espacio superior reducido */
-    padding-top: 5px; /* Menor padding superior */
-    font-size: 12px;
-    text-align: center;
-}
-
-.fat-footer .footer-section p,
-.fat-footer .footer-section ul li {
-    color: #e0e0e0;
-}
-
-
-
 
 
 
