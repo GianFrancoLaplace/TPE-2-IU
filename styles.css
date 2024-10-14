@@ -7,6 +7,10 @@
     --color-secundario: #FFA300;
     --color-secundario-claro: #FFC966;
     --color-secundario-oscuro: #FFA300;
+
+    --color-acento:#F61F32;
+    --color-acento-claro:#FF6671;
+    --color-acento-oscuro:#C11823;
       
     /* Tonos de blanco */
     --color-blanco-grisaceo: #484242;
@@ -19,6 +23,7 @@
     --bg-secundario: #282828; /* Fondo secundario */
     --bg-azul-claro: #D0EAF5;
     --bg-azul-oscuro: #102a43;
+    --bg-gris-oscuro:#2c2c2c;
       
     /* Tipografía */
     --tipografia-principal: Arial;
@@ -729,13 +734,13 @@ h2.titulo-vj{
             width: 100%;
         }
 
-        .carousel-card{
+        .carousel-card, .carousel-card-xxl, .carousel-card-xl{
             position: relative;
             overflow: hidden;
     
         }
 
-        .carousel-card img{
+        .carousel-card img, .carousel-card-xxl img,.carousel-card-xl img{
             display: block;
         }
 
@@ -745,30 +750,152 @@ h2.titulo-vj{
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+            background-color: var(--bg-gris-oscuro); /* Fondo oscuro con opacidad */
             opacity: 0; /* Por defecto, la superposición es invisible */
             display: flex;
             justify-content: center;
             align-items: center;
             transition: opacity 0.1s ease;
+            z-index: 1;
         }
-        .play-btn {
-            background-color: white;
-            color: black;
+
+        .carousel-card-xxl .overlay, .carousel-card-xl .overlay{
+            border-radius: 8px;
+        }
+
+        /* Efecto hover en las card, se activa el overlay */
+        .carousel-card:hover .overlay,
+        .carousel-card-xxl:hover .overlay,
+        .carousel-card-xl:hover .overlay {
+            opacity: 1;
+        }
+
+
+        /*-----etiquetas cards*/
+        /*vj premium*/
+        .tag {
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            background-color:var(--color-acento);
+            color: white;
+            font-size: 18px;
+            padding: 1px 2px;
+            border-radius: 0 0 8px 8px;
+            z-index: 2; /* Asegura que esté sobre la imagen */
+        }
+
+        .tag i{
+            font-size: 32px;
+        }
+        .carousel-card-xxl:hover .tag,
+        .carousel-card-xl:hover .tag {
+            display: none;
+        }
+        /*vj para comprar*/
+        .tag-buy {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color:var(--color-acento);
+            color: white;
+            font-size: var(--font-size-m);
+            padding: 1px 5px;
+            border-radius: 0 8px 0px 8px;
+            z-index: 2; /* Asegura que esté sobre la imagen */
+        }
+        /*----------------ajustes botones---------------------------*/
+
+        /*-------Boton VJ Free*/
+        .play-btn-free {
+            background-color: var(--color-primario);
+            color: #fff;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            border-radius: 25px;
+            padding: 10px 16px;
+            font-size: 18px;
+            font-family: var(--tipografia-principal);
+            gap: 2px;
             cursor: pointer;
             display: none; /* Oculto por defecto */
         }
-        /* Efecto hover en las cards */
-        .carousel-card:hover .overlay {
-            opacity: 1; /* La superposición se hace visible */
+        .play-btn-free:hover {
+            background-color: var(--color-primario-oscuro); /* Cambia el color al hacer hover */
+        }
+        .play-btn-free:focus{
+            background-color: var(--color-primario-claro);
+            color: #2c2c2c;
+        }
+        .play-btn-free i {
+            font-size: 24px; /* Ajusta el tamaño del icono */
         }
 
         /* Mostrar el botón al hacer hover */
-        .carousel-card:hover .play-btn {
-            display: block; /* El botón se muestra en hover */
+        .carousel-card:hover .play-btn-free,
+        .carousel-card-xxl:hover .play-btn-free,
+        .carousel-card-xl:hover .play-btn-free {
+            display: flex;
+            align-items:center;
+        }
+
+
+
+        /*--------Boton VJ Premium*/
+        .play-btn-premium {
+            background-color: var(--color-acento);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 16px;
+            font-size: 18px;
+            font-family: var(--tipografia-principal);
+            gap: 2px;
+            cursor: pointer;
+            display: none; /* Oculto por defecto */
+        }
+        .play-btn-premium:hover{
+            background-color: var(--color-acento-oscuro);
+        }
+        .play-btn-premium:focus{
+            background-color: var(--color-acento-claro);
+            color: var(--bg-gris-oscuro);
+        }
+        .play-btn-premium i {
+            font-size: 24px; /* Ajusta el tamaño del icono */
+        }
+        .carousel-card-xxl:hover .play-btn-premium,
+        .carousel-card-xl:hover .play-btn-premium{
+            display: flex;
+            align-items:center;
+        }
+
+        /*-------Boton VJ añadir al carrito*/
+        .add-vj-btn{
+            background-color: var(--color-acento);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 16px;
+            font-size: 18px;
+            font-family: var(--tipografia-principal);
+            gap: 2px;
+            cursor: pointer;
+            display: none; /* Oculto por defecto */
+        }
+        .add-vj-btn:hover{
+            background-color: var(--color-acento-oscuro);
+        }
+        .add-vj-btn:focus{
+            background-color: var(--color-acento-claro);
+            color: var(--bg-gris-oscuro);
+        }
+        .add-vj-btn i {
+            font-size: 24px; /* Ajusta el tamaño del icono */
+        }
+        .carousel-card-xxl:hover .add-vj-btn,
+        .carousel-card-xl:hover .add-vj-btn {
+            display: flex;
+            align-items:center;
         }
         
 
