@@ -88,4 +88,18 @@ function redireccionarAlHome() {
 }
 
 
+//menu hamburguesa desplegable
+document.querySelector('.menu-hamburguesa').addEventListener('click', function() {
+    document.querySelector('.menu-container').classList.add('active');
+});
 
+document.querySelector('.close-btn').addEventListener('click', function() {
+    document.querySelector('.menu-container').classList.remove('active');
+});
+
+const playButton = document.querySelector('.play-btn-free');
+
+// Agrega el evento click
+playButton.addEventListener('click', function() {
+    window.location.href = 'vj.html';  // Redirige a la página "vj.html"
+});

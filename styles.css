@@ -637,6 +637,11 @@ p{
     cursor: pointer;
   }
 
+  .menu-hamburguesa:hover{
+    transition: .3s ease;
+    transform: scale(1.1);
+  }
+
   .menu-hamburguesa span {
     display: block;
     width: 100%;
@@ -694,7 +699,110 @@ input.barra-busq{
     text-decoration: none;
     font-size: 1rem;
 }
+/*-------------------------MENU H----------------------------------*/
+.menu-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: flex-start;
+}
 
+.menu {
+    background-color: var(--color-primario);
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}
+
+.menu h2 {
+    font-size: var(--font-size-m);
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 1rem 0;
+}
+
+.menu ul li a {
+    color: white;
+    font-size: var(--font-size-m);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu ul li a:hover{
+    color: var(--color-secundario);
+    transition: .3s ease;
+    transform: scale(1.1);
+}
+
+.menu i{
+    color: #000;
+    font-size: var(--font-size-l);
+    padding: 5px;
+}
+
+.social-media i:hover{
+    
+    transition: .3s ease;
+    transform: scale(1.4);
+    color: #fff;
+}
+
+.close-btn i{
+    color: #fff;
+}
+
+.close-btn:hover{
+    transition: .3s ease;
+    transform: scale(1.1);
+}
+.close-btn i:hover{
+    color:var(--color-secundario);
+}
+
+.menu .social-media {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu .social-media a {
+    font-size: 24px;
+    color: white;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Mostrar el menú cuando esté activo */
+.menu-container.active {
+    display: flex;
+}
 /*---------------------------HOME--------------------*/
 .main-container{
     background: var(--bg-azul-claro);
@@ -1188,6 +1296,15 @@ h2.titulo-vj{
         font-size: var(--font-size-s);
     }
 
+    .play-btn-free {
+        text-decoration: none;
+    }
+
+    .play-btn-free:hover{
+        text-decoration: none;
+    }
+    
+
 
     /* VJ - CONTENIDOS RELACIONADOS */
 
@@ -1314,7 +1431,10 @@ h2.titulo-vj{
     .movies-section {
         flex-direction: row; 
     }
-
+    img.logo:hover{
+        transition: 0.5s ease;
+        transform: scale(1.1);
+    }
     .user-options {
         display: flex;
     }
@@ -1324,11 +1444,13 @@ h2.titulo-vj{
         align-items: center;
         padding: 0 10px;
         cursor: pointer;
+        border-radius: 45px;
     }
 
     .user-option:hover, .cart-option:hover{
         background-color: #fff;
-        border-radius: 45px;
+        transition: 0.5s ease;
+        transform: scale(1.05);
     }
 
     .user-text, .cart-text{
