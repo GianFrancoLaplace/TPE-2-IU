@@ -37,7 +37,9 @@
     --font-size-xs: 12px; /* Extra pequeño */
     --font-size-xxs: 10px; /* Extra pequeño */
 }
-
+html{
+    overflow-x: hidden;
+}
 body{
     margin: 0;
 }
@@ -701,6 +703,7 @@ input.barra-busq{
 	align-items: center;
     flex-wrap:wrap ;
     padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .titulo-vj{
@@ -1191,16 +1194,17 @@ h2.titulo-vj{
     }
 }
 
-/* FOOTER */
+/* ----------------FOOTER----------------------- */
 
 .fat-footer {
-    background-color: #2771CD;
+    background-color: var(--color-primario);
     color: #ffffff;
-    padding: 30px 0; /* Espacio interno reducido del footer */
-    display: flex; /* Mantiene las secciones en línea */
-    flex-wrap: wrap; /* Permite el ajuste de las secciones en pantallas más pequeñas */
-    justify-content: space-around; /* Espacio entre secciones */
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     text-align: center;
+    width: 100%;
 }
 
 .fat-footer .footer-section {
@@ -1377,6 +1381,14 @@ h2.titulo-vj{
     .lupa i{
         font-size: var(--font-size-m);
         border-radius: 25px;
+    }
+
+    .footer-section h2{
+        font-size: 18px;
+    }
+
+    .footer-section li{
+        font-size: 14px;
     }
 }
 
