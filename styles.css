@@ -1319,6 +1319,37 @@ h2.titulo-vj{
         display: flex;
     }
 
+    .user-option, .cart-option{
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+
+    .user-option:hover, .cart-option:hover{
+        background-color: #fff;
+        border-radius: 45px;
+    }
+
+    .user-text, .cart-text{
+        font-size: var(--font-size-s);
+    }
+    .user-options p{
+        font-weight: 600;
+    }
+
+    .user-options:hover .user-text{
+        color:#000;
+    }
+
+    .user-options:hover .cart-text{
+        color:#000;
+    }
+
+    .user-options:hover i{
+        color: #000;
+    }
+
     .header_container{
         max-width: 100%;
     }
@@ -1350,6 +1381,12 @@ h2.titulo-vj{
     }
     input.barra-busq{
         font-size: var(--font-size-s);
+    }
+
+    .user-options a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
     }
     
     .lupa i{
