@@ -44,37 +44,7 @@ body{
     margin: 0;
 }
 
-h1{
-    font-family: var(--tipografia-principal);
-    color: white;
-}
-
-h2{
-    font-family: var(--tipografia-principal);
-    color: white;
-}
-
-h3{
-    font-family: var(--tipografia-principal);
-    color: white;
-}
-
-h4{
-    font-family: var(--tipografia-principal);
-    color: white;
-}
-
-h5{
-    font-family: var(--tipografia-principal);
-    color: white;
-}
-
-h6{
-    font-family: var(--tipografia-principal);
-    color: white;
-}
-
-p{
+h1, h2, h3, h4, h5,h6, p, a, span{
     font-family: var(--tipografia-principal);
     color: white;
 }
@@ -116,18 +86,15 @@ p{
     margin-top: 0; /* Evitar márgenes extra */
 }
 
-
-
-
 /* Oculta el contenido principal inicialmente */
 .main-container {
     display: none;
 }
 
-
-
-
 /* VJ */
+.VJ-body{
+    background: linear-gradient(to bottom, var(--color-primario-oscuro), white) ;
+}
 
 .main-content {
     padding: 5px;
@@ -135,6 +102,8 @@ p{
 
 .titulos-section{
     display: flex;
+    margin-bottom: 12px;
+    justify-content: center;
 }
 
 .game-section{
@@ -166,7 +135,7 @@ p{
 .card-contenido-texto-div{
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-content: space-around;
     justify-content: center;
 }
 
@@ -198,7 +167,8 @@ p{
 
 .description-div{
     background-color: var(--color-primario-oscuro);
-    border-radius: 5%;
+    border-radius: 8px;
+    padding: 16px;
 }
 
 .contenido-link{
@@ -208,7 +178,7 @@ p{
 .card-contenido-div{
     display: flex;
     background-color: var(--color-primario);
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .card-contenido-img-div{
@@ -218,6 +188,7 @@ p{
 .card-contenido-img-div img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .card-contenido-texto-div{
@@ -234,9 +205,9 @@ p{
 }
 
 .contenido-link span{
-    font-family: var(--tipografia-principal);
     font-size: var(--font-size-xs);
     font-weight: bolder;
+    color: var(--color-secundario);
 }
 
 .comments-section {
@@ -254,19 +225,24 @@ p{
     border-radius: 5px;
     border: 1px solid var(--color-blanco-apagado);
     background-color: white;
-    color: #fff;
+    color: #000;
 }
 
-.comment-input button {
+.comment-div-input textarea::placeholder {
+    color: #000;
+}
+
+.comment-div-input button {
     margin-left: 10px;
     padding: 10px 20px;
     border: none;
-    background-color: #29b6f6;
+    background-color: white;
     cursor: pointer;
     border-radius: 5px;
+    color: var(--color-primario);
 }
 
-.comment-input button:hover {
+.comment-div-input button:hover {
     background-color: #0288d1;
 }
 
@@ -277,19 +253,13 @@ p{
     background-color: var(--color-primario-oscuro);
     padding: 15px;
     border-radius: 10px;
+    border: 1px solid var(--color-secundario);
 }
 
 .comment img {
     width: 50px;
     border-radius: 50%;
     margin-right: 20px;
-}
-
-.footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #aaa;
 }
 
 /* Sección Registrarse */
@@ -1235,29 +1205,32 @@ h2.titulo-vj{
         display: flex;
         align-items: center; 
         margin-right: 8px;
+        height: 100%;
+    }
+
+    .titulos-section-img-div img{ 
+        object-fit: cover;
+        width: 70px;
+        height: 50px;
     }
 
     .titulos-section-breadscrums-div{
         display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     .titulos-section-breadscrums-div span{
         font-size: 8px;
-        width: 80%;
     }
 
     .titulos-section-breadscrums-div h1{
         font-size: var(--font-size-xs);
-        color: #000;
-        width: 80%;
         margin: 0;
     }
 
     .titulos-section-breadscrums-div p{
         font-size: 8px;
-        color: #000;
         margin: 0;
     }
 
@@ -1346,9 +1319,100 @@ h2.titulo-vj{
         height: 24px;
         margin: 8px 20px 0px 0px;
     }
+
+    .comment-div-input-textarea-div{
+        display: flex;
+        width: 100vw;
+        align-items: center;
+    }
+
+    .comment-div-input-textarea-div img{
+        margin-right: 8px;
+        display: flex;
+    }
+
+    .comment-div-input-textarea-div textarea{
+        margin-right: 16px;
+
+    }
+
+    .comment-div-input-button-div{
+        display: flex;
+        margin: 8px 8px 16px 0px;
+        flex-direction: row-reverse;
+    }
+
+    .comment-div {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
 }
 
+/* ----------------FOOTER----------------------- */
+
+.fat-footer {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+}
+
+.fat-footer .footer-section {
+    flex: 1 1 20%; /* Se adapta a pantallas pequeñas y asegura que las secciones no se apilen */
+    margin: 0; /* Sin margen adicional */
+    padding: 0; /* Sin padding adicional */
+}
+
+.fat-footer h2 {
+    font-size: 16px;
+    margin: 0; /* Sin margen debajo del título */
+    font-weight: bold;
+}
+
+.fat-footer p,
+.fat-footer ul {
+    margin: 0; /* Sin margen adicional */
+    font-size: 14px; /* Tamaño uniforme para todas las secciones */
+    padding: 0; /* Sin padding en listas */
+}
+
+.fat-footer ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 5px; /* Sin margen */
+}
+
+.fat-footer ul li {
+    margin: 5px; /* Sin margen entre elementos de la lista */
+    font-size: 14px;
+}
+
+.footer-bottom {
+    width: 100%;
+    border-top: 1px solid #ffffff;
+    margin-top: 5px; /* Espacio superior reducido */
+    padding-top: 5px; /* Menor padding superior */
+    font-size: 12px;
+    text-align: center;
+}
+
+.fat-footer .footer-section p,
+.fat-footer .footer-section ul li {
+    color: #e0e0e0;
+}
+
+
+
+
+
+
+
+
 /* (tablets) */
+
 @media (min-width: 481px) {
     .login-section .login-box,
     .register-section .login-box {
@@ -1361,26 +1425,26 @@ h2.titulo-vj{
         font-size: 1.4em;
     }
 
+    /* VJ */
+
+    .titulos-section-breadscrums-div span{
+        font-size: var(--font-size-xxs);
+    }
+
+    .titulos-section-breadscrums-div h1{
+        font-size: var(--font-size-s);
+    }
+
+    .titulos-section-breadscrums-div p{
+        font-size: var(--font-size-xxs);
+    }
+
     .card-contenido-div:nth-child(2){
         margin-top: 16px;
     }
 
     .description-div p {
         font-size: var(--font-size-s);
-    }
-
-    .titulos-section-breadscrums-div{
-        width: 400px;
-    }
-
-    .titulos-section-breadscrums-div span{
-        display: block;
-        width: 100%;
-    }
-
-    .titulos-section-breadscrums-div h1{
-        display: block;
-        width: 100%;
     }
 
     .description-div{
@@ -1397,20 +1461,19 @@ h2.titulo-vj{
         max-width: 400px;
     }
 
-    .titulos-section-breadscrums-div{
-        width: 450px;
-    }
-
     .titulos-section-breadscrums-div span{
         display: block;
-        width: 80%;
-        font-size: var(--font-size-xxs);
+        font-size: var(--font-size-xs);
     }
 
     .titulos-section-breadscrums-div h1{
         display: block;
-        width: 80%;
-        font-size: var(--font-size-s);
+        font-size: var(--font-size-m);
+    }
+
+    .titulos-section-breadscrums-div p{
+        display: block;
+        font-size: var(--font-size-xs);
     }
     .busqueda_container{
         width: 20%;
@@ -1476,6 +1539,18 @@ h2.titulo-vj{
         max-width: 100%;
     }
 
+    .titulos-section-breadscrums-div span{
+        font-size: var(--font-size-s);
+    }
+
+    .titulos-section-breadscrums-div h1{
+        font-size: var(--font-size-l);
+    }
+
+    .titulos-section-breadscrums-div p{
+        font-size: var(--font-size-s);
+    }
+
     .tableroyanuncios-div{
         display: flex;
     }
@@ -1524,10 +1599,10 @@ h2.titulo-vj{
         font-size: 18px;
     }
 
-    .footer-section ul p{
-        font-size: var(--font-size-s);
+    .footer-section li{
+        font-size: 14px;
     }
-
+    
     .footer-bottom p{
         font-size: var(--font-size-s);
     }
