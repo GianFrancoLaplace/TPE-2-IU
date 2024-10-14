@@ -723,6 +723,8 @@ h2.titulo-vj{
 	margin: auto;
     background-color: #ffffff;
     padding: 0px 60px;
+    
+
 }
 
 
@@ -922,7 +924,15 @@ h2.titulo-vj{
 /*XXL*/
 .carousel-container-xxl, .carousel-container{
     position: relative;
+    overflow: hidden; /* Para evitar que el contenido se desborde */
+    
 }
+
+.carousel-container-xxl {
+    
+    margin-bottom: 10px;
+}
+
 
 .carousel-btn-anterior-xxl, .carousel-btn-siguiente-xxl,
 .carousel-btn-anterior-xl, .carousel-btn-siguiente-xl{
@@ -1180,6 +1190,68 @@ h2.titulo-vj{
         margin: 8px 20px 0px 0px;
     }
 }
+
+/* FOOTER */
+
+.fat-footer {
+    background-color: #2771CD;
+    color: #ffffff;
+    padding: 30px 0; /* Espacio interno reducido del footer */
+    display: flex; /* Mantiene las secciones en línea */
+    flex-wrap: wrap; /* Permite el ajuste de las secciones en pantallas más pequeñas */
+    justify-content: space-around; /* Espacio entre secciones */
+    text-align: center;
+}
+
+.fat-footer .footer-section {
+    flex: 1 1 20%; /* Se adapta a pantallas pequeñas y asegura que las secciones no se apilen */
+    margin: 0; /* Sin margen adicional */
+    padding: 0; /* Sin padding adicional */
+}
+
+.fat-footer h2 {
+    font-size: 16px;
+    margin: 0; /* Sin margen debajo del título */
+    font-weight: bold;
+}
+
+.fat-footer p,
+.fat-footer ul {
+    margin: 0; /* Sin margen adicional */
+    font-size: 14px; /* Tamaño uniforme para todas las secciones */
+    padding: 0; /* Sin padding en listas */
+}
+
+.fat-footer ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 5px; /* Sin margen */
+}
+
+.fat-footer ul li {
+    margin: 5px; /* Sin margen entre elementos de la lista */
+    font-size: 14px;
+}
+
+.footer-bottom {
+    width: 100%;
+    border-top: 1px solid #ffffff;
+    margin-top: 5px; /* Espacio superior reducido */
+    padding-top: 5px; /* Menor padding superior */
+    font-size: 12px;
+    text-align: center;
+}
+
+.fat-footer .footer-section p,
+.fat-footer .footer-section ul li {
+    color: #e0e0e0;
+}
+
+
+
+
+
+
+
 
 /* (tablets) */
 @media (min-width: 481px) {
