@@ -43,37 +43,7 @@ body{
     margin: 0;
 }
 
-h1{
-    font-family: var(--tipografia-principal);
-    color: white;
-}
-
-h2{
-    font-family: var(--tipografia-principal);
-    color: white;
-}
-
-h3{
-    font-family: var(--tipografia-principal);
-    color: white;
-}
-
-h4{
-    font-family: var(--tipografia-principal);
-    color: white;
-}
-
-h5{
-    font-family: var(--tipografia-principal);
-    color: white;
-}
-
-h6{
-    font-family: var(--tipografia-principal);
-    color: white;
-}
-
-p{
+h1, h2, h3, h4, h5,h6, p, a, span{
     font-family: var(--tipografia-principal);
     color: white;
 }
@@ -115,20 +85,23 @@ p{
     margin-top: 0; /* Evitar márgenes extra */
 }
 
-
-
-
 /* Oculta el contenido principal inicialmente */
 .main-container {
     display: none;
 }
 
-
-
-
 /* VJ */
 .VJ-body{
     background: linear-gradient(to bottom, var(--color-primario-oscuro), white) ;
+}
+
+.VJ-body p, .VJ-body h1, .VJ-body h2, .VJ-body h3{
+    color: white ;
+}
+
+.VJ-body a{
+    color: white;
+    text-decoration: none;
 }
 
 .main-content {
@@ -139,6 +112,7 @@ p{
     display: flex;
     margin-bottom: 12px;
     justify-content: center;
+    margin: 12px auto;
 }
 
 .game-section{
@@ -169,9 +143,8 @@ p{
 
 .card-contenido-texto-div{
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .card-contenido-texto-div p{
@@ -198,6 +171,7 @@ p{
     background-color: var(--color-primario-oscuro);
     border-radius: 8px;
     padding: 16px;
+    box-sizing: border-box;
 }
 
 .contenido-link{
@@ -207,7 +181,7 @@ p{
 .card-contenido-div{
     display: flex;
     background-color: var(--color-primario);
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .card-contenido-img-div{
@@ -217,6 +191,7 @@ p{
 .card-contenido-img-div img{
     width: 100%;
     height: 100%;
+    border-radius: 8px 0px 0px 8px;
     object-fit: cover;
 }
 
@@ -231,13 +206,12 @@ p{
 .card-contenido-texto-div a{
     display: block;
     text-align: center;
-    color: var(--color-secundario);
-    font-family: var(--tipografia-principal);
 }
 
-.contenido-link span{
+.card-contenido-texto-div span{
     font-size: var(--font-size-xs);
     font-weight: bolder;
+    color: var(--color-secundario);
 }
 
 .comments-section {
@@ -256,20 +230,28 @@ p{
     border-radius: 5px;
     border: 1px solid var(--color-blanco-apagado);
     background-color: white;
-    color: #fff;
+    color: #000;
+}
+
+.comment-div-input textarea::placeholder {
+    color: #000;
 }
 
 .comment-div-input button {
+    font-family: var(--tipografia-principal);
+    font-weight: bold;
     margin-left: 10px;
     padding: 10px 20px;
     border: none;
-    background-color: #29b6f6;
+    background-color: white;
     cursor: pointer;
     border-radius: 5px;
+    color: var(--color-primario);
 }
 
 .comment-div-input button:hover {
-    background-color: #0288d1;
+    background-color: var(--color-primario);
+    color: white;
 }
 
 .comment-div {
@@ -279,6 +261,7 @@ p{
     background-color: var(--color-primario-oscuro);
     padding: 15px;
     border-radius: 10px;
+    border: 1px solid var(--color-secundario);
 }
 
 .comment-div img {
@@ -1080,35 +1063,32 @@ h2.titulo-vj{
         display: flex;
         align-items: center; 
         margin-right: 8px;
+        height: 100%;
     }
 
     .titulos-section-img-div img{ 
         object-fit: cover;
-        width: 70px;
-        height: 50px;
+        max-width: 100%;
+        height: 100%;
     }
 
     .titulos-section-breadscrums-div{
         display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     .titulos-section-breadscrums-div span{
         font-size: 8px;
-        width: 80%;
     }
 
     .titulos-section-breadscrums-div h1{
         font-size: var(--font-size-xs);
-        color: #000;
-        width: 80%;
         margin: 0;
     }
 
     .titulos-section-breadscrums-div p{
         font-size: 8px;
-        color: #000;
         margin: 0;
     }
 
@@ -1189,11 +1169,6 @@ h2.titulo-vj{
         margin: 8px 8px 16px 0px;
         flex-direction: row-reverse;
     }
-
-    .comment-div {
-        flex-direction: column; 
-        align-items: flex-start; 
-    }
 }
 
 /* ----------------FOOTER----------------------- */
@@ -1252,14 +1227,8 @@ h2.titulo-vj{
     color: #e0e0e0;
 }
 
-
-
-
-
-
-
-
 /* (tablets) */
+
 @media (min-width: 481px) {
     .login-section .login-box,
     .register-section .login-box {
@@ -1272,26 +1241,26 @@ h2.titulo-vj{
         font-size: 1.4em;
     }
 
+    /* VJ */
+
+    .titulos-section-breadscrums-div span{
+        font-size: var(--font-size-xxs);
+    }
+
+    .titulos-section-breadscrums-div h1{
+        font-size: var(--font-size-s);
+    }
+
+    .titulos-section-breadscrums-div p{
+        font-size: var(--font-size-xxs);
+    }
+
     .card-contenido-div:nth-child(2){
         margin-top: 16px;
     }
 
     .description-div p {
         font-size: var(--font-size-s);
-    }
-
-    .titulos-section-breadscrums-div{
-        width: 400px;
-    }
-
-    .titulos-section-breadscrums-div span{
-        display: block;
-        width: 100%;
-    }
-
-    .titulos-section-breadscrums-div h1{
-        display: block;
-        width: 100%;
     }
 
     .description-div{
@@ -1331,20 +1300,19 @@ h2.titulo-vj{
         max-width: 400px;
     }
 
-    .titulos-section-breadscrums-div{
-        width: 450px;
-    }
-
     .titulos-section-breadscrums-div span{
         display: block;
-        width: 80%;
-        font-size: var(--font-size-xxs);
+        font-size: var(--font-size-xs);
     }
 
     .titulos-section-breadscrums-div h1{
         display: block;
-        width: 80%;
-        font-size: var(--font-size-s);
+        font-size: var(--font-size-m);
+    }
+
+    .titulos-section-breadscrums-div p{
+        display: block;
+        font-size: var(--font-size-xs);
     }
 
     .card-contenido-texto-div h3{
@@ -1373,6 +1341,18 @@ h2.titulo-vj{
     
     .header_container{
         max-width: 100%;
+    }
+
+    .titulos-section-breadscrums-div span{
+        font-size: var(--font-size-s);
+    }
+
+    .titulos-section-breadscrums-div h1{
+        font-size: var(--font-size-l);
+    }
+
+    .titulos-section-breadscrums-div p{
+        font-size: var(--font-size-s);
     }
 
     .tableroyanuncios-div{
@@ -1442,6 +1422,20 @@ h2.titulo-vj{
 
     .footer-section li{
         font-size: 14px;
+    }
+}
+
+@media (min-width: 1025px){
+    .titulos-section-breadscrums-div span{
+        font-size: var(--font-size-m);
+    }
+
+    .titulos-section-breadscrums-div h1{
+        font-size: var(--font-size-xl);
+    }
+
+    .titulos-section-breadscrums-div p{
+        font-size: var(--font-size-m);
     }
 }
 
