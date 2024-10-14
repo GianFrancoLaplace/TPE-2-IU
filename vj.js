@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (progress >= 100) {
             clearInterval(interval);
             loading.style.display = 'none'; // Oculta el contenedor de carga
-            mainContainer.style.display = 'block'; // Muestra el contenido principal
+            mainContainer.style.visibility = 'visible'; // Muestra el contenido principal
         }
     }, 100);
 });

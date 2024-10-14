@@ -7,6 +7,10 @@
     --color-secundario: #FFA300;
     --color-secundario-claro: #FFC966;
     --color-secundario-oscuro: #FFA300;
+
+    --color-acento:#F61F32;
+    --color-acento-claro:#FF6671;
+    --color-acento-oscuro:#C11823;
       
     /* Tonos de blanco */
     --color-blanco-grisaceo: #484242;
@@ -19,6 +23,7 @@
     --bg-secundario: #282828; /* Fondo secundario */
     --bg-azul-claro: #D0EAF5;
     --bg-azul-oscuro: #102a43;
+    --bg-gris-oscuro:#2c2c2c;
       
     /* Tipografía */
     --tipografia-principal: Arial;
@@ -72,8 +77,6 @@ p{
 }
 
 /* Estilos del loading */
-
-/* Estilos para la pantalla de carga */
 .loading-container {
     position: fixed;
     top: 0;
@@ -84,9 +87,10 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     z-index: 9999;
+    
 }
+
 
 .loading-circle {
     border: 6px solid #ddd;
@@ -95,7 +99,7 @@ p{
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Quita el margen inferior */
 }
 
 @keyframes spin {
@@ -106,12 +110,19 @@ p{
 .loading-percentage {
     font-size: 18px;
     color: #3498db;
+    margin-top: 0; /* Evitar márgenes extra */
 }
+
+
+
 
 /* Oculta el contenido principal inicialmente */
 .main-container {
     display: none;
 }
+
+
+
 
 /* VJ */
 .VJ-body{
@@ -130,7 +141,7 @@ p{
 
 .game-section{
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Ajustar si se requiere menos espacio */
 }
 
 .tableroyanuncios-div{
@@ -613,7 +624,7 @@ p{
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 5px 10px;
 }
 
 .menu-hamburguesa {
@@ -634,7 +645,7 @@ p{
   }
 
 .logo{
-    max-width: 100px;
+    max-width: 120px;
     height: auto;
 }
 
@@ -643,18 +654,31 @@ p{
     align-items: center;
     background-color: white;
     border-radius: 25px;
-    padding: 5px 10px;
-    width: 80px;
+    padding: 5px 8px;
+    width: 100px;
 }
-.barra-busq{ /*input*/
+input.barra-busq{
     width: 100%;
     border:none;
+    font-size: var(--font-size-s);
 }
 
 .lupa{ /*boton*/
     color: #000000;
     cursor: pointer;
     border: none;
+    background-color: white;
+}
+
+.lupa i{
+    font-size: var(--font-size-m);
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.lupa i:hover{
+    background-color: var(--color-secundario);
+
 }
 
 /* Opciones de usuario */
@@ -700,6 +724,8 @@ h2.titulo-vj{
 	margin: auto;
     background-color: #ffffff;
     padding: 0px 60px;
+    
+
 }
 
 
@@ -730,11 +756,184 @@ h2.titulo-vj{
             width: 100%;
         }
 
+        .carousel-card, .carousel-card-xxl, .carousel-card-xl{
+            position: relative;
+            overflow: hidden;
+    
+        }
+
+        .carousel-card img, .carousel-card-xxl img,.carousel-card-xl img{
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--bg-gris-oscuro); /* Fondo oscuro con opacidad */
+            opacity: 0; /* Por defecto, la superposición es invisible */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.1s ease;
+            z-index: 1;
+        }
+
+        .carousel-card-xxl .overlay, .carousel-card-xl .overlay{
+            border-radius: 8px;
+        }
+
+        /* Efecto hover en las card, se activa el overlay */
+        .carousel-card:hover .overlay,
+        .carousel-card-xxl:hover .overlay,
+        .carousel-card-xl:hover .overlay {
+            opacity: 1;
+        }
+
+
+        /*-----etiquetas cards*/
+        /*vj premium*/
+        .tag {
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            background-color:var(--color-acento);
+            color: white;
+            font-size: 18px;
+            padding: 1px 2px;
+            border-radius: 0 0 8px 8px;
+            z-index: 2; /* Asegura que esté sobre la imagen */
+        }
+
+        .tag i{
+            font-size: 32px;
+        }
+        .carousel-card-xxl:hover .tag,
+        .carousel-card-xl:hover .tag {
+            display: none;
+        }
+        /*vj para comprar*/
+        .tag-buy {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color:var(--color-acento);
+            color: white;
+            font-size: var(--font-size-m);
+            padding: 1px 5px;
+            border-radius: 0 8px 0px 8px;
+            z-index: 2; /* Asegura que esté sobre la imagen */
+        }
+        /*----------------ajustes botones---------------------------*/
+
+        /*-------Boton VJ Free*/
+        .play-btn-free {
+            background-color: var(--color-primario);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 16px;
+            font-size: 18px;
+            font-family: var(--tipografia-principal);
+            gap: 2px;
+            cursor: pointer;
+            display: none; /* Oculto por defecto */
+        }
+        .play-btn-free:hover {
+            background-color: var(--color-primario-oscuro); /* Cambia el color al hacer hover */
+        }
+        .play-btn-free:focus{
+            background-color: var(--color-primario-claro);
+            color: #2c2c2c;
+        }
+        .play-btn-free i {
+            font-size: 24px; /* Ajusta el tamaño del icono */
+        }
+
+        /* Mostrar el botón al hacer hover */
+        .carousel-card:hover .play-btn-free,
+        .carousel-card-xxl:hover .play-btn-free,
+        .carousel-card-xl:hover .play-btn-free {
+            display: flex;
+            align-items:center;
+        }
+
+
+
+        /*--------Boton VJ Premium*/
+        .play-btn-premium {
+            background-color: var(--color-acento);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 16px;
+            font-size: 18px;
+            font-family: var(--tipografia-principal);
+            gap: 2px;
+            cursor: pointer;
+            display: none; /* Oculto por defecto */
+        }
+        .play-btn-premium:hover{
+            background-color: var(--color-acento-oscuro);
+        }
+        .play-btn-premium:focus{
+            background-color: var(--color-acento-claro);
+            color: var(--bg-gris-oscuro);
+        }
+        .play-btn-premium i {
+            font-size: 24px; /* Ajusta el tamaño del icono */
+        }
+        .carousel-card-xxl:hover .play-btn-premium,
+        .carousel-card-xl:hover .play-btn-premium{
+            display: flex;
+            align-items:center;
+        }
+
+        /*-------Boton VJ añadir al carrito*/
+        .add-vj-btn{
+            background-color: var(--color-acento);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 16px;
+            font-size: 18px;
+            font-family: var(--tipografia-principal);
+            gap: 2px;
+            cursor: pointer;
+            display: none; /* Oculto por defecto */
+        }
+        .add-vj-btn:hover{
+            background-color: var(--color-acento-oscuro);
+        }
+        .add-vj-btn:focus{
+            background-color: var(--color-acento-claro);
+            color: var(--bg-gris-oscuro);
+        }
+        .add-vj-btn i {
+            font-size: 24px; /* Ajusta el tamaño del icono */
+        }
+        .carousel-card-xxl:hover .add-vj-btn,
+        .carousel-card-xl:hover .add-vj-btn {
+            display: flex;
+            align-items:center;
+        }
+        
+
 
 /*XXL*/
 .carousel-container-xxl, .carousel-container{
     position: relative;
+    overflow: hidden; /* Para evitar que el contenido se desborde */
+    
 }
+
+.carousel-container-xxl {
+    
+    margin-bottom: 10px;
+}
+
 
 .carousel-btn-anterior-xxl, .carousel-btn-siguiente-xxl,
 .carousel-btn-anterior-xl, .carousel-btn-siguiente-xl{
@@ -994,6 +1193,68 @@ h2.titulo-vj{
     }
 }
 
+/* FOOTER */
+
+.fat-footer {
+    background-color: #2771CD;
+    color: #ffffff;
+    padding: 30px 0; /* Espacio interno reducido del footer */
+    display: flex; /* Mantiene las secciones en línea */
+    flex-wrap: wrap; /* Permite el ajuste de las secciones en pantallas más pequeñas */
+    justify-content: space-around; /* Espacio entre secciones */
+    text-align: center;
+}
+
+.fat-footer .footer-section {
+    flex: 1 1 20%; /* Se adapta a pantallas pequeñas y asegura que las secciones no se apilen */
+    margin: 0; /* Sin margen adicional */
+    padding: 0; /* Sin padding adicional */
+}
+
+.fat-footer h2 {
+    font-size: 16px;
+    margin: 0; /* Sin margen debajo del título */
+    font-weight: bold;
+}
+
+.fat-footer p,
+.fat-footer ul {
+    margin: 0; /* Sin margen adicional */
+    font-size: 14px; /* Tamaño uniforme para todas las secciones */
+    padding: 0; /* Sin padding en listas */
+}
+
+.fat-footer ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 5px; /* Sin margen */
+}
+
+.fat-footer ul li {
+    margin: 5px; /* Sin margen entre elementos de la lista */
+    font-size: 14px;
+}
+
+.footer-bottom {
+    width: 100%;
+    border-top: 1px solid #ffffff;
+    margin-top: 5px; /* Espacio superior reducido */
+    padding-top: 5px; /* Menor padding superior */
+    font-size: 12px;
+    text-align: center;
+}
+
+.fat-footer .footer-section p,
+.fat-footer .footer-section ul li {
+    color: #e0e0e0;
+}
+
+
+
+
+
+
+
+
 /* (tablets) */
 @media (min-width: 481px) {
     .login-section .login-box,
@@ -1089,6 +1350,10 @@ h2.titulo-vj{
     .description-div h2{
         font-size: var(--font-size-m);
     }
+    
+    .busqueda_container{
+        width: 20%;
+    }
 }
 
 /* (pantallas grandes de escritorio) */
@@ -1147,4 +1412,24 @@ h2.titulo-vj{
     .card-contenido-texto-div span{
         font-size: var(--font-size-m);
     }
+
+    .busqueda_container{
+        background-color: white;
+        border-radius: 25px;
+        padding: 5px 10px;
+        width: 25%;
+    }
+
+    .header_container i{
+        font-size: var(--font-size-l);
+    }
+    input.barra-busq{
+        font-size: var(--font-size-s);
+    }
+    
+    .lupa i{
+        font-size: var(--font-size-m);
+        border-radius: 25px;
+    }
 }
+
