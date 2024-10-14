@@ -617,7 +617,7 @@ p{
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 5px 10px;
 }
 
 .menu-hamburguesa {
@@ -638,7 +638,7 @@ p{
   }
 
 .logo{
-    max-width: 100px;
+    max-width: 120px;
     height: auto;
 }
 
@@ -647,18 +647,31 @@ p{
     align-items: center;
     background-color: white;
     border-radius: 25px;
-    padding: 5px 10px;
-    width: 80px;
+    padding: 5px 8px;
+    width: 100px;
 }
-.barra-busq{ /*input*/
+input.barra-busq{
     width: 100%;
     border:none;
+    font-size: var(--font-size-s);
 }
 
 .lupa{ /*boton*/
     color: #000000;
     cursor: pointer;
     border: none;
+    background-color: white;
+}
+
+.lupa i{
+    font-size: var(--font-size-m);
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.lupa i:hover{
+    background-color: var(--color-secundario);
+
 }
 
 /* Opciones de usuario */
@@ -1226,6 +1239,9 @@ h2.titulo-vj{
         width: 80%;
         font-size: var(--font-size-s);
     }
+    .busqueda_container{
+        width: 20%;
+    }
 }
 
 /* (pantallas grandes de escritorio) */
@@ -1265,4 +1281,24 @@ h2.titulo-vj{
     .anuncio-div img{
         height: 300px;
     }
+
+    .busqueda_container{
+        background-color: white;
+        border-radius: 25px;
+        padding: 5px 10px;
+        width: 25%;
+    }
+
+    .header_container i{
+        font-size: var(--font-size-l);
+    }
+    input.barra-busq{
+        font-size: var(--font-size-s);
+    }
+    
+    .lupa i{
+        font-size: var(--font-size-m);
+        border-radius: 25px;
+    }
 }
+
