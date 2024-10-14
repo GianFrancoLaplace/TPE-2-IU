@@ -78,8 +78,6 @@ p{
 }
 
 /* Estilos del loading */
-
-/* Estilos para la pantalla de carga */
 .loading-container {
     position: fixed;
     top: 0;
@@ -90,9 +88,10 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     z-index: 9999;
+    
 }
+
 
 .loading-circle {
     border: 6px solid #ddd;
@@ -101,7 +100,7 @@ p{
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Quita el margen inferior */
 }
 
 @keyframes spin {
@@ -112,12 +111,19 @@ p{
 .loading-percentage {
     font-size: 18px;
     color: #3498db;
+    margin-top: 0; /* Evitar márgenes extra */
 }
+
+
+
 
 /* Oculta el contenido principal inicialmente */
 .main-container {
     display: none;
 }
+
+
+
 
 /* VJ */
 
@@ -131,7 +137,7 @@ p{
 
 .game-section{
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Ajustar si se requiere menos espacio */
 }
 
 .tableroyanuncios-div{
