@@ -28,13 +28,14 @@
     /* Tipografía */
     --tipografia-principal: Arial;
       
-    --font-size-xxl: 3rem;  /* Extra grande (48px / 16px) */
-    --font-size-xl: 2.5rem; /* Muy grande (40px / 16px) */
-    --font-size-l: 2rem;    /* Grande (32px / 16px) */
-    --font-size-m: 1.5rem;  /* Mediano (24px / 16px) */
-    --font-size-s: 1rem;    /* Pequeño (16px / 16px) */
-    --font-size-xs: 0.75rem; /* Extra pequeño (12px / 16px) */
-    --font-size-xxs: 0.625rem;
+    /* Tamaños de fuente */
+    --font-size-xxl: 48px; /* Extra grande */
+    --font-size-xl: 40px; /* Muy grande */
+    --font-size-l: 32px; /* Grande */
+    --font-size-m: 24px; /* Mediano */
+    --font-size-s: 16px; /* Pequeño */
+    --font-size-xs: 12px; /* Extra pequeño */
+    --font-size-xxs: 10px; /* Extra pequeño */
 }
 html{
     overflow-x: hidden;
@@ -127,9 +128,6 @@ p{
 
 
 /* VJ */
-.VJ-body{
-    background: linear-gradient(to bottom, var(--color-primario-oscuro), white) ;
-}
 
 .main-content {
     padding: 5px;
@@ -137,8 +135,6 @@ p{
 
 .titulos-section{
     display: flex;
-    margin-bottom: 12px;
-    justify-content: center;
 }
 
 .game-section{
@@ -150,7 +146,7 @@ p{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .game-section img {
@@ -170,23 +166,29 @@ p{
 .card-contenido-texto-div{
     display: flex;
     flex-wrap: wrap;
-    align-content: space-around;
+    align-content: center;
     justify-content: center;
 }
 
-.card-contenido-texto-div p{
+.card-contenido-texto-div h3{
+    font-family: var(--tipografia-principal);
     text-align: center;
+}
+
+.card-contenido-texto-div p{
+    font-family: var(--tipografia-principal);
+    text-align: center;
+}
+
+.card-contenido-texto-div a{
+    font-family: var(--tipografia-principal);
+    color: var(--color-secundario);
 }
 
 .container-button{
     border: #000;
     border-radius: 4px;
-}
-
-.container-button button{
-    background-color: var(--color-primario-oscuro);
-    border: 1px solid black;
-    width: 36px;
+    background-color: var(--color-primario);
 }
 
 .description {
@@ -196,8 +198,7 @@ p{
 
 .description-div{
     background-color: var(--color-primario-oscuro);
-    border-radius: 8px;
-    padding: 16px;
+    border-radius: 5%;
 }
 
 .contenido-link{
@@ -217,7 +218,6 @@ p{
 .card-contenido-img-div img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .card-contenido-texto-div{
@@ -228,14 +228,13 @@ p{
     text-align: center;
 }
 
-.card-contenido-texto-div a{
+.contenido-link{
     display: block;
     text-align: center;
-    color: var(--color-secundario);
-    font-family: var(--tipografia-principal);
 }
 
 .contenido-link span{
+    font-family: var(--tipografia-principal);
     font-size: var(--font-size-xs);
     font-weight: bolder;
 }
@@ -244,13 +243,12 @@ p{
     margin-bottom: 30px;
 }
 
-.comment-div-input img{
-    width: 50px;
-    border-radius: 50%;
+.comment-input {
+    display: flex;
+    margin-bottom: 20px;
 }
 
-.comment-div-input textarea {
-    height: 10vh;
+.comment-input textarea {
     flex-grow: 1;
     padding: 10px;
     border-radius: 5px;
@@ -259,7 +257,7 @@ p{
     color: #fff;
 }
 
-.comment-div-input button {
+.comment-input button {
     margin-left: 10px;
     padding: 10px 20px;
     border: none;
@@ -268,11 +266,11 @@ p{
     border-radius: 5px;
 }
 
-.comment-div-input button:hover {
+.comment-input button:hover {
     background-color: #0288d1;
 }
 
-.comment-div {
+.comment {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -281,7 +279,7 @@ p{
     border-radius: 10px;
 }
 
-.comment-div img {
+.comment img {
     width: 50px;
     border-radius: 50%;
     margin-right: 20px;
@@ -317,6 +315,7 @@ p{
 }
 
 .register-section .login-box {
+     
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Sombras del conteiner */
@@ -1071,21 +1070,26 @@ h2.titulo-vj{
         padding: 8px;
         font-size: 14px; 
     }
+
+    .comment {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
     
     /* VJ */
     
     /* Titulos */
+    .titulos-section{
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: center;
+    }
 
     .titulos-section-img-div { 
         display: flex;
         align-items: center; 
         margin-right: 8px;
-    }
-
-    .titulos-section-img-div img{ 
-        object-fit: cover;
-        width: 70px;
-        height: 50px;
     }
 
     .titulos-section-breadscrums-div{
@@ -1114,10 +1118,18 @@ h2.titulo-vj{
 
     /* 4 en Línea */
 
-    .tablero-div{
-        display: flex;
+    .game-section{
         width: 100%;
-        height: 100%;
+    }
+
+    .tableroyanucios-div{
+        height: 200px;
+        width: 100%;
+    }
+
+    .tablero-div{
+        width: 100%;
+        align-items: center;
     }
 
     .anuncio-div{
@@ -1126,12 +1138,17 @@ h2.titulo-vj{
 
     /* VJ - Descripción */
 
+    .description-div{
+        padding: 16px;
+        border-radius: 8px;
+    }
+
     .description-div h2{
-        margin: 0;
+        font-size: var(--font-size-xl);
     }
 
     .description-div p{
-        margin-top: 12px;
+        font-size: var(--font-size-s);
     }
 
 
@@ -1146,53 +1163,34 @@ h2.titulo-vj{
         justify-content: space-between;
     }
 
-    .card-contenido-img-div{
-        width: 35%;
-    }
-
-    .card-contenido-texto-div{
-        width: 65%;
-    }
-
     .card-contenido-texto-div h3{
+        font-size: var(--font-size-s);
+        font-family: var(--tipografia-principal);
+        text-align: center;
         margin: 4px 0px 4px;
     }
 
     .card-contenido-texto-div p{
+        font-size: var(--font-size-xs);
+        font-family: var(--tipografia-principal);
+        text-align: center;
         margin: 4px 0px 4px;
     }
 
+    .card-contenido-texto-div a{
+        font-size: var(--font-size-xs);
+        font-family: var(--tipografia-principal);
+        color: var(--color-secundario);
+        text-align: center;
+    }
+
     .container-button{
+        border: #000;
+        border-radius: 4px;
+        background-color: var(--color-primario);
         width: 24px;
         height: 24px;
         margin: 8px 20px 0px 0px;
-    }
-
-    .comment-div-input-textarea-div{
-        display: flex;
-        width: 100vw;
-        align-items: center;
-    }
-
-    .comment-div-input-textarea-div img{
-        margin-right: 8px;
-        display: flex;
-    }
-
-    .comment-div-input-textarea-div textarea{
-        margin-right: 16px;
-
-    }
-
-    .comment-div-input-button-div{
-        display: flex;
-        margin: 8px 8px 16px 0px;
-        flex-direction: row-reverse;
-    }
-
-    .comment-div {
-        flex-direction: column; 
-        align-items: flex-start; 
     }
 }
 
@@ -1254,11 +1252,6 @@ h2.titulo-vj{
 
 
 
-
-
-
-
-
 /* (tablets) */
 @media (min-width: 481px) {
     .login-section .login-box,
@@ -1298,29 +1291,6 @@ h2.titulo-vj{
         width: 80%;
         margin: 0px auto;
     }
-
-    .card-contenido-div{
-        width: 80%;
-        margin: 0px auto;
-    }
-
-    .comments-section{
-        width: 80%;
-        margin: 0px auto;
-    }
-
-    .comment-div-input-textarea-div{
-        width: 100%;
-        margin-right: 0%;
-    }
-
-    .comment-div-input-textarea-div textarea{
-        margin-right: 0%;
-    }
-
-    .comment-div-input-button-div{
-        margin-right: 0px;
-    }
 }
 
 /* (pantallas pequeñas de escritorio) */
@@ -1346,15 +1316,6 @@ h2.titulo-vj{
         width: 80%;
         font-size: var(--font-size-s);
     }
-
-    .card-contenido-texto-div h3{
-        font-size: var(--font-size-m);
-    }
-
-    .description-div h2{
-        font-size: var(--font-size-m);
-    }
-    
     .busqueda_container{
         width: 20%;
     }
@@ -1366,55 +1327,36 @@ h2.titulo-vj{
     .register-section .login-box {
         width: 400px; 
     }
-    
+
+    .movie {
+        width: 22%; 
+    }
+
+    .movies-section {
+        flex-direction: row; 
+    }
+
     .user-options {
         display: flex;
     }
-    
+
     .header_container{
         max-width: 100%;
     }
 
     .tableroyanuncios-div{
-        height: 60vh;
+        display: flex;
     }
 
-    .anuncio-div {
+    .anuncio-div{
         display: block;
         width: 15%;
-        height: 90%;
+        height: 60%;
         margin: 0 16px;
     }
 
-    .anuncio-div img {
-        width: 100%; /* Las imágenes de los anuncios ocuparán todo el ancho del contenedor */
-        height: 100%; /* Forzar la imagen a estirarse para ocupar el 90% de la altura del tablero */
-        object-fit: fill; /* Permite que la imagen se deforme para llenar el espacio */
-    }
-
-    .buttons-div{
-        position: relative;
-        left: 13.5%;
-    }
-
-    .description-div h2{
-        font-size: var(--font-size-l);
-    }
-
-    .description-div p{
-        font-size: var(--font-size-m);
-    }
-
-    .card-contenido-texto-div h3{
-        font-size: var(--font-size-l);
-    }
-
-    .card-contenido-texto-div p{
-        font-size: var(--font-size-m);
-    }
-
-    .card-contenido-texto-div span{
-        font-size: var(--font-size-m);
+    .anuncio-div img{
+        height: 300px;
     }
 
     .busqueda_container{
@@ -1444,4 +1386,3 @@ h2.titulo-vj{
         font-size: 14px;
     }
 }
-
