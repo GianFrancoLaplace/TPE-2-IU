@@ -28,14 +28,13 @@
     /* Tipografía */
     --tipografia-principal: Arial;
       
-    /* Tamaños de fuente */
-    --font-size-xxl: 48px; /* Extra grande */
-    --font-size-xl: 40px; /* Muy grande */
-    --font-size-l: 32px; /* Grande */
-    --font-size-m: 24px; /* Mediano */
-    --font-size-s: 16px; /* Pequeño */
-    --font-size-xs: 12px; /* Extra pequeño */
-    --font-size-xxs: 10px; /* Extra pequeño */
+    --font-size-xxl: 3rem;  /* Extra grande (48px / 16px) */
+    --font-size-xl: 2.5rem; /* Muy grande (40px / 16px) */
+    --font-size-l: 2rem;    /* Grande (32px / 16px) */
+    --font-size-m: 1.5rem;  /* Mediano (24px / 16px) */
+    --font-size-s: 1rem;    /* Pequeño (16px / 16px) */
+    --font-size-xs: 0.75rem; /* Extra pequeño (12px / 16px) */
+    --font-size-xxs: 0.625rem;
 }
 html{
     overflow-x: hidden;
@@ -96,6 +95,15 @@ h1, h2, h3, h4, h5,h6, p, a, span{
     background: linear-gradient(to bottom, var(--color-primario-oscuro), white) ;
 }
 
+.VJ-body p, .VJ-body h1, .VJ-body h2, .VJ-body h3{
+    color: white ;
+}
+
+.VJ-body a{
+    color: white;
+    text-decoration: none;
+}
+
 .main-content {
     padding: 5px;
 }
@@ -104,6 +112,7 @@ h1, h2, h3, h4, h5,h6, p, a, span{
     display: flex;
     margin-bottom: 12px;
     justify-content: center;
+    margin: 12px auto;
 }
 
 .game-section{
@@ -115,7 +124,7 @@ h1, h2, h3, h4, h5,h6, p, a, span{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .game-section img {
@@ -134,30 +143,23 @@ h1, h2, h3, h4, h5,h6, p, a, span{
 
 .card-contenido-texto-div{
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: center;
-}
-
-.card-contenido-texto-div h3{
-    font-family: var(--tipografia-principal);
-    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .card-contenido-texto-div p{
-    font-family: var(--tipografia-principal);
     text-align: center;
-}
-
-.card-contenido-texto-div a{
-    font-family: var(--tipografia-principal);
-    color: var(--color-secundario);
 }
 
 .container-button{
     border: #000;
     border-radius: 4px;
-    background-color: var(--color-primario);
+}
+
+.container-button button{
+    background-color: var(--color-primario-oscuro);
+    border: 1px solid black;
+    width: 36px;
 }
 
 .description {
@@ -169,6 +171,7 @@ h1, h2, h3, h4, h5,h6, p, a, span{
     background-color: var(--color-primario-oscuro);
     border-radius: 8px;
     padding: 16px;
+    box-sizing: border-box;
 }
 
 .contenido-link{
@@ -188,6 +191,7 @@ h1, h2, h3, h4, h5,h6, p, a, span{
 .card-contenido-img-div img{
     width: 100%;
     height: 100%;
+    border-radius: 8px 0px 0px 8px;
     object-fit: cover;
 }
 
@@ -199,12 +203,12 @@ h1, h2, h3, h4, h5,h6, p, a, span{
     text-align: center;
 }
 
-.contenido-link{
+.card-contenido-texto-div a{
     display: block;
     text-align: center;
 }
 
-.contenido-link span{
+.card-contenido-texto-div span{
     font-size: var(--font-size-xs);
     font-weight: bolder;
     color: var(--color-secundario);
@@ -214,12 +218,13 @@ h1, h2, h3, h4, h5,h6, p, a, span{
     margin-bottom: 30px;
 }
 
-.comment-input {
-    display: flex;
-    margin-bottom: 20px;
+.comment-div-input img{
+    width: 50px;
+    border-radius: 50%;
 }
 
-.comment-input textarea {
+.comment-div-input textarea {
+    height: 10vh;
     flex-grow: 1;
     padding: 10px;
     border-radius: 5px;
@@ -233,6 +238,8 @@ h1, h2, h3, h4, h5,h6, p, a, span{
 }
 
 .comment-div-input button {
+    font-family: var(--tipografia-principal);
+    font-weight: bold;
     margin-left: 10px;
     padding: 10px 20px;
     border: none;
@@ -243,10 +250,11 @@ h1, h2, h3, h4, h5,h6, p, a, span{
 }
 
 .comment-div-input button:hover {
-    background-color: #0288d1;
+    background-color: var(--color-primario);
+    color: white;
 }
 
-.comment {
+.comment-div {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -256,7 +264,7 @@ h1, h2, h3, h4, h5,h6, p, a, span{
     border: 1px solid var(--color-secundario);
 }
 
-.comment img {
+.comment-div img {
     width: 50px;
     border-radius: 50%;
     margin-right: 20px;
@@ -285,7 +293,6 @@ h1, h2, h3, h4, h5,h6, p, a, span{
 }
 
 .register-section .login-box {
-     
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Sombras del conteiner */
@@ -804,6 +811,8 @@ h2.titulo-vj{
 	margin: auto;
     background-color: #ffffff;
     padding: 0px 60px;
+    
+
 }
 
 
@@ -997,60 +1006,21 @@ h2.titulo-vj{
             display: flex;
             align-items:center;
         }
-
-        /*---------------FOOTER-------------------------------*/
-        .fat-footer {
-            background-color: #2771CD;
-            color: #ffffff;
-            padding: 30px 0; /* Espacio interno reducido del footer */
-            display: flex; /* Mantiene las secciones en línea */
-            flex-wrap: wrap; /* Permite el ajuste de las secciones en pantallas más pequeñas */
-            justify-content: space-around; /* Espacio entre secciones */
-            text-align: center;
-        }
-        .fat-footer .footer-section {
-            flex: 1 1 20%; /* Se adapta a pantallas pequeñas y asegura que las secciones no se apilen */
-            margin: 0; /* Sin margen adicional */
-            padding: 0; /* Sin padding adicional */
-        }
-        .fat-footer h2 {
-            font-size: 16px;
-            margin: 0; /* Sin margen debajo del título */
-            font-weight: bold;
-        }
-        .fat-footer p,
-        .fat-footer ul {
-            margin: 0; /* Sin margen adicional */
-            font-size: 14px; /* Tamaño uniforme para todas las secciones */
-            padding: 0; /* Sin padding en listas */
-        }
-        .fat-footer ul {
-            list-style: none; /* Elimina los puntos de la lista */
-            margin: 5px; /* Sin margen */
-        }
-        .fat-footer ul li {
-            margin: 5px; /* Sin margen entre elementos de la lista */
-            font-size: 14px;
-        }
-        .footer-bottom {
-            width: 100%;
-            border-top: 1px solid #ffffff;
-            margin-top: 5px; /* Espacio superior reducido */
-            padding-top: 5px; /* Menor padding superior */
-            font-size: 12px;
-            text-align: center;
-        }
-        .fat-footer .footer-section p,
-        .fat-footer .footer-section ul li {
-            color: #e0e0e0;
-        }
         
 
 
 /*XXL*/
 .carousel-container-xxl, .carousel-container{
     position: relative;
+    overflow: hidden; /* Para evitar que el contenido se desborde */
+    
 }
+
+.carousel-container-xxl {
+    
+    margin-bottom: 10px;
+}
+
 
 .carousel-btn-anterior-xxl, .carousel-btn-siguiente-xxl,
 .carousel-btn-anterior-xl, .carousel-btn-siguiente-xl{
@@ -1185,21 +1155,10 @@ h2.titulo-vj{
         padding: 8px;
         font-size: 14px; 
     }
-
-    .comment {
-        flex-direction: column; 
-        align-items: flex-start; 
-    }
-
     
     /* VJ */
     
     /* Titulos */
-    .titulos-section{
-        margin-bottom: 12px;
-        display: flex;
-        justify-content: center;
-    }
 
     .titulos-section-img-div { 
         display: flex;
@@ -1210,8 +1169,8 @@ h2.titulo-vj{
 
     .titulos-section-img-div img{ 
         object-fit: cover;
-        width: 70px;
-        height: 50px;
+        max-width: 100%;
+        height: 100%;
     }
 
     .titulos-section-breadscrums-div{
@@ -1236,18 +1195,10 @@ h2.titulo-vj{
 
     /* 4 en Línea */
 
-    .game-section{
-        width: 100%;
-    }
-
-    .tableroyanucios-div{
-        height: 200px;
-        width: 100%;
-    }
-
     .tablero-div{
+        display: flex;
         width: 100%;
-        align-items: center;
+        height: 100%;
     }
 
     .anuncio-div{
@@ -1256,17 +1207,12 @@ h2.titulo-vj{
 
     /* VJ - Descripción */
 
-    .description-div{
-        padding: 16px;
-        border-radius: 8px;
-    }
-
     .description-div h2{
-        font-size: var(--font-size-xl);
+        margin: 0;
     }
 
     .description-div p{
-        font-size: var(--font-size-s);
+        margin-top: 12px;
     }
 
     .play-btn-free {
@@ -1290,31 +1236,23 @@ h2.titulo-vj{
         justify-content: space-between;
     }
 
+    .card-contenido-img-div{
+        width: 35%;
+    }
+
+    .card-contenido-texto-div{
+        width: 65%;
+    }
+
     .card-contenido-texto-div h3{
-        font-size: var(--font-size-s);
-        font-family: var(--tipografia-principal);
-        text-align: center;
         margin: 4px 0px 4px;
     }
 
     .card-contenido-texto-div p{
-        font-size: var(--font-size-xs);
-        font-family: var(--tipografia-principal);
-        text-align: center;
         margin: 4px 0px 4px;
     }
 
-    .card-contenido-texto-div a{
-        font-size: var(--font-size-xs);
-        font-family: var(--tipografia-principal);
-        color: var(--color-secundario);
-        text-align: center;
-    }
-
     .container-button{
-        border: #000;
-        border-radius: 4px;
-        background-color: var(--color-primario);
         width: 24px;
         height: 24px;
         margin: 8px 20px 0px 0px;
@@ -1340,11 +1278,6 @@ h2.titulo-vj{
         display: flex;
         margin: 8px 8px 16px 0px;
         flex-direction: row-reverse;
-    }
-
-    .comment-div {
-        flex-direction: column; 
-        align-items: flex-start; 
     }
 }
 
@@ -1404,13 +1337,6 @@ h2.titulo-vj{
     color: #e0e0e0;
 }
 
-
-
-
-
-
-
-
 /* (tablets) */
 
 @media (min-width: 481px) {
@@ -1451,6 +1377,29 @@ h2.titulo-vj{
         width: 80%;
         margin: 0px auto;
     }
+
+    .card-contenido-div{
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .comments-section{
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .comment-div-input-textarea-div{
+        width: 100%;
+        margin-right: 0%;
+    }
+
+    .comment-div-input-textarea-div textarea{
+        margin-right: 0%;
+    }
+
+    .comment-div-input-button-div{
+        margin-right: 0px;
+    }
 }
 
 /* (pantallas pequeñas de escritorio) */
@@ -1475,6 +1424,15 @@ h2.titulo-vj{
         display: block;
         font-size: var(--font-size-xs);
     }
+
+    .card-contenido-texto-div h3{
+        font-size: var(--font-size-m);
+    }
+
+    .description-div h2{
+        font-size: var(--font-size-m);
+    }
+    
     .busqueda_container{
         width: 20%;
     }
@@ -1486,6 +1444,7 @@ h2.titulo-vj{
     .register-section .login-box {
         width: 400px; 
     }
+<<<<<<< HEAD
 
     .movie {
         width: 22%; 
@@ -1535,6 +1494,13 @@ h2.titulo-vj{
         color: #000;
     }
 
+=======
+    
+    .user-options {
+        display: flex;
+    }
+    
+>>>>>>> parent of 601e731 (Merge branch 'main' of https://github.com/GianFrancoLaplace/TPE-2-IU)
     .header_container{
         max-width: 100%;
     }
@@ -1552,18 +1518,45 @@ h2.titulo-vj{
     }
 
     .tableroyanuncios-div{
-        display: flex;
+        height: 60vh;
     }
 
-    .anuncio-div{
+    .anuncio-div {
         display: block;
         width: 15%;
-        height: 60%;
+        height: 90%;
         margin: 0 16px;
     }
 
-    .anuncio-div img{
-        height: 300px;
+    .anuncio-div img {
+        width: 100%; /* Las imágenes de los anuncios ocuparán todo el ancho del contenedor */
+        height: 100%; /* Forzar la imagen a estirarse para ocupar el 90% de la altura del tablero */
+        object-fit: fill; /* Permite que la imagen se deforme para llenar el espacio */
+    }
+
+    .buttons-div{
+        position: relative;
+        left: 13.5%;
+    }
+
+    .description-div h2{
+        font-size: var(--font-size-l);
+    }
+
+    .description-div p{
+        font-size: var(--font-size-m);
+    }
+
+    .card-contenido-texto-div h3{
+        font-size: var(--font-size-l);
+    }
+
+    .card-contenido-texto-div p{
+        font-size: var(--font-size-m);
+    }
+
+    .card-contenido-texto-div span{
+        font-size: var(--font-size-m);
     }
 
     .busqueda_container{
@@ -1591,10 +1584,6 @@ h2.titulo-vj{
         border-radius: 25px;
     }
 
-    h2.titulo-vj{
-        font-size: var(--font-size-m);
-    }
-
     .footer-section h2{
         font-size: 18px;
     }
@@ -1602,8 +1591,19 @@ h2.titulo-vj{
     .footer-section li{
         font-size: 14px;
     }
-    
-    .footer-bottom p{
-        font-size: var(--font-size-s);
+}
+
+@media (min-width: 1025px){
+    .titulos-section-breadscrums-div span{
+        font-size: var(--font-size-m);
+    }
+
+    .titulos-section-breadscrums-div h1{
+        font-size: var(--font-size-xl);
+    }
+
+    .titulos-section-breadscrums-div p{
+        font-size: var(--font-size-m);
     }
 }
+
