@@ -1444,19 +1444,12 @@ h2.titulo-vj{
     .register-section .login-box {
         width: 400px; 
     }
-<<<<<<< HEAD
 
-    .movie {
-        width: 22%; 
-    }
-
-    .movies-section {
-        flex-direction: row; 
-    }
     img.logo:hover{
         transition: 0.5s ease;
         transform: scale(1.1);
     }
+    
     .user-options {
         display: flex;
     }
@@ -1494,23 +1487,16 @@ h2.titulo-vj{
         color: #000;
     }
 
-=======
-    
-    .user-options {
-        display: flex;
-    }
-    
->>>>>>> parent of 601e731 (Merge branch 'main' of https://github.com/GianFrancoLaplace/TPE-2-IU)
     .header_container{
         max-width: 100%;
     }
 
     .titulos-section-breadscrums-div span{
-        font-size: var(--font-size-s);
+        font-size: var(--font-size-m);
     }
 
     .titulos-section-breadscrums-div h1{
-        font-size: var(--font-size-l);
+        font-size: var(--font-size-xl);
     }
 
     .titulos-section-breadscrums-div p{
@@ -1592,18 +1578,3 @@ h2.titulo-vj{
         font-size: 14px;
     }
 }
-
-@media (min-width: 1025px){
-    .titulos-section-breadscrums-div span{
-        font-size: var(--font-size-m);
-    }
-
-    .titulos-section-breadscrums-div h1{
-        font-size: var(--font-size-xl);
-    }
-
-    .titulos-section-breadscrums-div p{
-        font-size: var(--font-size-m);
-    }
-}
-
