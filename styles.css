@@ -1283,59 +1283,111 @@ h2.titulo-vj{
 
 /* ----------------FOOTER----------------------- */
 
-.fat-footer {
-    background-color: var(--color-primario);
-    color: #ffffff;
-    padding: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: center;
-    width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+.custom-container {
+   max-width: 1170px;
+   margin: auto;
 }
 
-.fat-footer .footer-section {
-    flex: 1 1 20%; /* Se adapta a pantallas pequeñas y asegura que las secciones no se apilen */
-    margin: 0; /* Sin margen adicional */
-    padding: 0; /* Sin padding adicional */
+.custom-row {
+   display: flex;
+   
 }
 
-.fat-footer h2 {
-    font-size: 16px;
-    margin: 0; /* Sin margen debajo del título */
-    font-weight: bold;
+.custom-footer {
+   background-color: #2771CD;
+   
 }
 
-.fat-footer p,
-.fat-footer ul {
-    margin: 0; /* Sin margen adicional */
-    font-size: 14px; /* Tamaño uniforme para todas las secciones */
-    padding: 0; /* Sin padding en listas */
+.custom-footer-col {
+    width: 25%;
+    padding: 0 15px;
+    
+    flex-direction: column;
+   
+    
 }
 
-.fat-footer ul {
-    list-style: none; /* Elimina los puntos de la lista */
-    margin: 5px; /* Sin margen */
+.custom-footer-col h4 {
+   font-size: 18px;
+   color: #ffffff;
+   text-transform: capitalize;
+   margin-bottom: 35px;
+   font-weight: 500;
+   position: relative;
 }
 
-.fat-footer ul li {
-    margin: 5px; /* Sin margen entre elementos de la lista */
-    font-size: 14px;
+.custom-footer-col h4::before {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: -10px;
+   background-color: #e91e63;
+   height: 2px;
+   width: 100px;
 }
 
-.footer-bottom {
-    width: 100%;
-    border-top: 1px solid #ffffff;
-    margin-top: 5px; /* Espacio superior reducido */
-    padding-top: 5px; /* Menor padding superior */
-    font-size: 12px;
-    text-align: center;
+.custom-footer-col ul {
+   list-style: none;
 }
 
-.fat-footer .footer-section p,
-.fat-footer .footer-section ul li {
-    color: #e0e0e0;
+.custom-footer-col ul li:not(:last-child) {
+   margin-bottom: 10px;
 }
+
+.custom-footer-col ul li a {
+   font-size: 16px;
+   color: #bbbbbb;
+   text-decoration: none;
+   font-weight: 300;
+   display: block;
+   transition: all 0.3s ease;
+   padding-left: 0; /* Alinea los enlaces con el título */
+}
+
+
+.custom-footer-col ul li a:hover {
+   color: #ffffff;
+   padding-left: 8px;
+}
+.custom-social-links {
+    margin-top: auto; /* Empuja los enlaces sociales hacia la parte inferior del contenedor */
+ }
+.custom-social-links a {
+   display: inline-block;
+   height: 40px;
+   width: 40px;
+   background-color: rgba(255, 255, 255, 0.2);
+   margin: 0 10px 10px 0;
+   text-align: center;
+   line-height: 40px;
+   border-radius: 50%;
+   color: #ffffff;
+   transition: all 0.5s ease;
+}
+
+.custom-social-links a:hover {
+   color: #24262b;
+   background-color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+   .custom-footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+   }
+}
+
+@media (max-width: 574px) {
+   .custom-footer-col {
+      width: 100%;
+   }
+}
+
 
 /* (tablets) */
 
