@@ -251,7 +251,7 @@ h1, h2, h3, h4, h5,h6, p, a, span{
 }
 
 .comment-div-input textarea {
-    height: 10vh;
+    max-height: 10vh;
     flex-grow: 1;
     padding: 10px;
     border-radius: 5px;
@@ -277,14 +277,11 @@ h1, h2, h3, h4, h5,h6, p, a, span{
 }
 
 .comment-div-input button:hover {
-    background-color: var(--color-primario);
+    background-color: var(--color-primario-oscuro);
     color: white;
 }
 
 .comment-div {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     margin-bottom: 20px;
     background-color: var(--color-primario-oscuro);
     padding: 15px;
@@ -1309,7 +1306,7 @@ h2.titulo-vj{
     }
 
     .comment-div-input-textarea-div textarea{
-        margin-right: 16px;
+        margin-right: 65px;
 
     }
 
@@ -1325,6 +1322,7 @@ h2.titulo-vj{
     }
 
     .comment-text{
+        display: block;
         font-size: var(--font-size-xs);
         margin-top: 0px;
         margin-left: 70px;
@@ -1615,9 +1613,6 @@ h2.titulo-vj{
         font-size: var(--font-size-xl);
     }
 
-    .titulos-section-breadscrums-div p{
-        font-size: var(--font-size-s);
-    }
 
     .tableroyanuncios-div{
         align-items: center;
@@ -1642,7 +1637,7 @@ h2.titulo-vj{
 
     .buttons-div{
         position: relative;
-        left: 13.5%;
+        left: 15%;
     }
 
     .description-div h2{
@@ -1662,6 +1657,18 @@ h2.titulo-vj{
     }
 
     .card-contenido-texto-div span{
+        font-size: var(--font-size-m);
+    }
+
+    .comment-container-perfil h6{
+        font-size: var(--font-size-l);
+    }
+
+    .comment-fecha{
+        font-size: var(--font-size-s);
+    }
+
+    .comment-text{
         font-size: var(--font-size-m);
     }
 
