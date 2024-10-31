@@ -232,14 +232,6 @@ h1, h2, h3, h4, h5,h6, p, a, span{
     align-items: center;
 }
 
-.container-titulo-foro h3{
-    font-size: var(--font-size-m);
-}
-
-.container-titulo-foro span{
-    font-size: var(--font-size-m);
-}
-
 .container-titulo-foro span{
     margin-right: 4px;
 }
@@ -1300,6 +1292,14 @@ h2.titulo-vj{
         margin: 8px 20px 0px 0px;
     }
 
+    .container-titulo-foro h3{
+        font-size: var(--font-size-s);
+    }
+
+    .container-titulo-foro span{
+        font-size: var(--font-size-s);
+    }
+
     .comment-div-input-textarea-div{
         display: flex;
         width: 100vw;
@@ -1499,6 +1499,14 @@ h2.titulo-vj{
         margin-right: auto;
     }
 
+    .container-titulo-foro h3{
+        font-size: var(--font-size-m);
+    }
+
+    .container-titulo-foro span{
+        font-size: var(--font-size-m);
+    }
+
     .comment-div-input-textarea-div{
         width: 100%;
         margin-right: 0%;
@@ -1558,7 +1566,7 @@ h2.titulo-vj{
     }
 
     .comment-container-perfil h6{
-        font-size: var(--font-size-m);
+        font-size: var(--font-size-s);
     }
 
     .comment-text{
@@ -1677,6 +1685,14 @@ h2.titulo-vj{
 
     .card-contenido-texto-div span{
         font-size: var(--font-size-m);
+    }
+
+    .container-titulo-foro h3{
+        font-size: var(--font-size-l);
+    }
+
+    .container-titulo-foro span{
+        font-size: var(--font-size-l);
     }
 
     .foto-perfil{
