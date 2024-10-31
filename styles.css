@@ -299,9 +299,7 @@ h1, h2, h3, h4, h5,h6, p, a, span{
     margin: 0;
 }
 
-.comment-container-perfil img {
-    width: 50px;
-    height: 50px;
+.foto-perfil {
     border-radius: 50%;
     margin-right: 20px;
 }
@@ -1206,7 +1204,6 @@ h2.titulo-vj{
     .titulos-section-img-div img{ 
         object-fit: cover;
         max-width: 100%;
-        height: 100%;
     }
 
     .titulos-section-breadscrums-div{
@@ -1245,10 +1242,12 @@ h2.titulo-vj{
 
     .description-div h2{
         margin: 0;
+        font-size: var(--font-size-xs);
     }
 
     .description-div p{
         margin-top: 12px;
+        font-size: 8px;
     }
 
     .play-btn-free {
@@ -1282,10 +1281,17 @@ h2.titulo-vj{
 
     .card-contenido-texto-div h3{
         margin: 4px 0px 4px;
+        font-size: var(--font-size-xs);
     }
 
     .card-contenido-texto-div p{
         margin: 4px 0px 4px;
+        font-size: var(--font-size-xxs);
+    }
+
+    .card-contenido-texto-div span{
+        margin: 4px 0px 4px;
+        font-size: var(--font-size-xxs);
     }
 
     .container-button{
@@ -1300,9 +1306,9 @@ h2.titulo-vj{
         align-items: center;
     }
 
-    .comment-div-input-textarea-div img{
+    .foto-perfil{
         margin-right: 8px;
-        display: flex;
+        width: 40px;
     }
 
     .comment-div-input-textarea-div textarea{
@@ -1318,18 +1324,18 @@ h2.titulo-vj{
 
     .comment-fecha{
         margin: 0 0 0 12px;
-        font-size: var(--font-size-xs);
+        font-size: var(--font-size-xxs);
     }
 
     .comment-text{
         display: block;
-        font-size: var(--font-size-xs);
+        font-size: var(--font-size-xxs);
         margin-top: 0px;
-        margin-left: 70px;
+        margin-left: 48px;
     }
 
     .comment-container-perfil h6{
-        font-size: var(--font-size-s);
+        font-size: var(--font-size-xs);
     }
 }
 
@@ -1474,7 +1480,7 @@ h2.titulo-vj{
     }
 
     .description-div p {
-        font-size: var(--font-size-s);
+        font-size: var(--font-size-xxs);
     }
 
     .description-div{
@@ -1538,9 +1544,17 @@ h2.titulo-vj{
     .description-div h2{
         font-size: var(--font-size-m);
     }
+
+    .description-div p{
+        font-size: var(--font-size-s);
+    }
     
     .busqueda_container{
         width: 20%;
+    }
+
+    .foto-perfil{
+        width: 48px;
     }
 
     .comment-container-perfil h6{
@@ -1549,6 +1563,11 @@ h2.titulo-vj{
 
     .comment-text{
         font-size: var(--font-size-s);
+        margin-left: 56px;
+    }
+
+    .comment-fecha{
+        font-size: var(--font-size-xs);
     }
 }
 
@@ -1660,6 +1679,10 @@ h2.titulo-vj{
         font-size: var(--font-size-m);
     }
 
+    .foto-perfil{
+        width: 56px;
+    }
+
     .comment-container-perfil h6{
         font-size: var(--font-size-l);
     }
@@ -1670,6 +1693,7 @@ h2.titulo-vj{
 
     .comment-text{
         font-size: var(--font-size-m);
+        margin-left: 64px;
     }
 
     .busqueda_container{
