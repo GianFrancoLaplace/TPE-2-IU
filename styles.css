@@ -809,7 +809,7 @@ input.barra-busq{
 /*---------------------------HOME--------------------*/
 .main-container{
     background: var(--bg-azul-claro);
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	display: flex;
 	align-items: center;
     flex-wrap:wrap ;
@@ -1038,7 +1038,7 @@ h2.titulo-vj{
 /*XXL*/
 .carousel-container-xxl, .carousel-container{
     position: relative;
-    overflow: hidden; /* Para evitar que el contenido se desborde */
+    /* overflow: hidden; */
     
 }
 
