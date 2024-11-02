@@ -885,18 +885,18 @@ h2.titulo-vj{
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: var(--bg-gris-oscuro); /* Fondo oscuro con opacidad */
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi transparente */
             opacity: 0; /* Por defecto, la superposición es invisible */
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: opacity 0.1s ease;
+            transition: opacity 0.3s ease;
             z-index: 1;
-        }
-
-        .carousel-card-xxl .overlay, .carousel-card-xl .overlay{
+            backdrop-filter: blur(10px); /* Efecto de desenfoque */
             border-radius: 8px;
         }
+
+
 
         /* Efecto hover en las card, se activa el overlay */
         .carousel-card:hover .overlay,
@@ -1608,6 +1608,9 @@ h2.titulo-vj{
         transition: 0.5s ease;
         transform: scale(1.05);
     }
+    .cart-option:hover i, .user-option:hover i{
+        color: #000000;
+    }
 
     .user-text, .cart-text{
         font-size: var(--font-size-s);
@@ -1616,16 +1619,12 @@ h2.titulo-vj{
         font-weight: 600;
     }
 
-    .user-options:hover .user-text{
+    .user-option:hover p.user-text{
         color:#000;
     }
 
-    .user-options:hover .cart-text{
+    .cart-option:hover p.cart-text{
         color:#000;
-    }
-
-    .user-options:hover i{
-        color: #000;
     }
 
     .header_container{

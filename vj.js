@@ -103,3 +103,19 @@ const playButton = document.querySelector('.play-btn-free');
 playButton.addEventListener('click', function() {
     window.location.href = 'vj.html';  // Redirige a la página "vj.html"
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const botones = document.querySelectorAll('.add-btn');
+
+    botones.forEach(boton => {
+        boton.addEventListener('click', () => {
+            boton.textContent = 'Agregado';
+  
+            const icono = document.createElement('i');
+            icono.classList.add('material-symbols-outlined');
+            icono.textContent = 'check_circle';
+            boton.appendChild(icono);
+        });
+    });
+});
